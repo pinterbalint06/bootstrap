@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-bs-theme="dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center focimcol">
+                <h1 class="display-1 text-center focim">Bootstrap</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="telepites" class="carousel slide">
+                    <!-- Wrapper for slides -->
+                    <div class="row">
+                        <div class="col-1">
+    
+                            <button class="carousel-control-prev" type="button" data-bs-target="#telepites"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                        </div>
+                        <div class="col-10">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h1 class="w-100 d-block">Page 1</h1>
+                                </div>
+                                <div class="carousel-item">
+                                    <h1 class="text-center">Page 2</h1>
+                                </div>
+                                <div class="carousel-item">
+                                    <h1>Page 3</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <button class="carousel-control-next" type="button" data-bs-target="#telepites"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Indicators -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="carousel-indicators position-relative">
+                                <button type="button" data-bs-target="#telepites" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#telepites" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#telepites" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <button type="button" class="btn btn-dark change-color" data-color="dark">Dark</button>
+                    <button type="button" class="btn btn-danger change-color" data-color="danger">Danger</button>
+                    <button type="button" class="btn btn-success change-color" data-color="success">Success</button>
+                    <button type="button" class="btn btn-warning change-color" data-color="warning">Warning</button>
+                    <div class="color-box w-100 m-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap/js/jquery-3.6.3.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>

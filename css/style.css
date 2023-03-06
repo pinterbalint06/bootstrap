@@ -1,0 +1,17 @@
+.focim {
+    font-size: 10rem;
+}
+
+.focimcol {
+    height: 100vh;
+}
+
+body {
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    padding-bottom: 200px;
+    background-color: #553C7B;
+}
+
+.color-box {
+    height: 100px;
+}
