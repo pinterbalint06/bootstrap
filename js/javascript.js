@@ -6,9 +6,8 @@ const carousel = new bootstrap.Carousel(myCarouselElement, {
 })
 
 $(document).ready(function() {
-    // Handle button click events
     $('.change-color').on('click', function() {
-        var colorClass = $(this).attr('class').split(' ')[1].replace("btn-", "");
-        $('.color-box').removeClass().addClass('color-box w-100 m-3 bg-' + colorClass);
+        var colorClass = $(this).attr('class').split(' ')[1].replace("btn-", "bg-");
+        $('#color-box').removeClass().addClass('w-100 m-3 ' + colorClass);
     });
 });

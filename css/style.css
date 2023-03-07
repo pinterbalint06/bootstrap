@@ -20,6 +20,11 @@ body {
     background-color: #553C7B;
 }
 
-.color-box {
+#color-box {
     height: 100px;
+}
+
+svg {
+    height: 2rem;
+    width: 2rem;
 }
