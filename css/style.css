@@ -32,3 +32,39 @@ svg {
 .minw50 {
     min-width: 50%;
 }
+
+#cols {
+    height: 5vh;
+}
+
+.minheight {
+    min-height: 20vw;
+}
+
+.szemleltetes {
+    border: 2px solid red;
+}
+
+.minh50 {
+    min-height: 50px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+#meretezheto {
+    min-width: 20%;
+    min-height: 100%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+}
+
+#meretezokar {
+    cursor: col-resize;
+    background-color: red;
+}
+
+.custom-col-sm-12-md-4 {
+    width: calc(100% / 3);
+}
