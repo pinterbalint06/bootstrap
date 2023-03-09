@@ -31,8 +31,13 @@ body {
 }
 
 @keyframes bg-transition {
-    from { background-position: 0 0; }
-    to { background-position: 100% 0; }
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
 }
 
 svg {
@@ -65,10 +70,25 @@ svg {
 }
 
 #meretezheto {
+    max-width: 100%;
     border: 3px solid blue;
 }
 
 #meretezokar {
     cursor: col-resize;
     background-color: red;
+}
+
+#progressbaranimation {
+    animation: betolt 10s infinite linear;
+  }
+
+@keyframes betolt {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
