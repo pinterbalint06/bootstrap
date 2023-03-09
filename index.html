@@ -17,9 +17,9 @@
                 <h1 class="display-1 text-center focim">Bootstrap</h1>
             </div>
         </div>
-        <div class="row mx-5">
+        <div class="row mx-md-5 mb-3">
             <div class="col-12">
-                <h1 class="w-100 d-block text-center display-3 mb-3">Miért jó a Bootstrap?</h1>
+                <h1 class="w-100 d-block text-center display-2 mb-3">Miért jó a Bootstrap?</h1>
                 <div class="row row-cols-1 row-cols-lg-3">
                     <div class="col">
                         <div class="card w-100 h-100">
@@ -89,7 +89,7 @@
                         <div class="card w-100 h-100">
                             <div class="card-body">
                                 <h2 class="card-title">Modern kialakítás</h2>
-                                <p class="card-text fs-4 text-justify">A legtöbb modern oldal ilyen
+                                <p class="card-text fs-4 text-justify">A legtöbb modern oldal
                                     blokkokból felépülő kialakítást szokott alkalmazni. Ez
                                     megoldható Bootstrap nélkül is, de nehezebb és több időt vesz
                                     igénybe.</p>
@@ -141,20 +141,25 @@
                     <div class="col">
                         <div class="card w-100 h-100">
                             <div class="card-body">
-                                <!-- TODO: A reszponzivitas szimulator neha atlog a kartyan -->
                                 <h2 class="card-title">Reszponzívitás</h2>
                                 <p class="card-text fs-4 text-justify">Különböző méretű, felbontású
                                     kijelzőkre egyszerűen lehet a Bootstrap-el egy weboldalt
                                     csinálni, ami változik a mérettől, felbontástól függően.
                                 </p>
-                                <p class="card-text fs-4 text-justify text-warning">A lenti példánál szimulálni tudod a reszponzívitást, a piros cella jobbra-balra húzásával!</p>
-                                <div class="row h-25">
+                                <p class="card-text fs-4 text-justify text-warning">A lenti példánál szimulálni tudod a
+                                    reszponzívitást, a piros cella jobbra-balra húzásával!</p>
+                                <div class="row">
                                     <div class="col-12 h-100" id="meretezhetoparent">
-                                        <div id="meretezheto"
-                                            class="mh-100 row">
-                                            <div class="custom-col-sm-12-md-4 bg-success">col-sm-12 col-md-4</div>
-                                            <div class="custom-col-sm-12-md-4 bg-warning">col-sm-12 col-md-4</div>
-                                            <div id="meretezokar" class="custom-col-sm-12-md-4">col-sm-12 col-md-4</div>
+                                        <div id="meretezheto" class="mh-100 row">
+                                            <div class="bg-success">
+                                                <p class="m-1">col-sm-12 col-md-6 col-lg-4</p>
+                                            </div>
+                                            <div class="bg-warning">
+                                                <p class="m-1">col-sm-12 col-md-6 col-lg-4</p>
+                                            </div>
+                                            <div id="meretezokar">
+                                                <p class="m-1">col-sm-12 col-md-12 col-lg-4</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -173,7 +178,7 @@
                 <button type="button" class="btn btn-warning change-color mx-1" data-color="warning">Warning</button>
             </div>
             <div class="col-12">
-                <div class="w-100 m-3 bg-dark" id="color-box">
+                <div class="w-100 m-3 bg-dark" id="szinvalto">
 
                 </div>
             </div>

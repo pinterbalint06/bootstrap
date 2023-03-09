@@ -20,8 +20,19 @@ body {
     background-color: #553C7B;
 }
 
-#color-box {
+#szinvalto {
     height: 100px;
+    transition: background-color 1s ease-in-out;
+}
+
+.bg-transition {
+    background-image: linear-gradient(to right, #007bff, #ff0000);
+    animation: bg-transition 3s ease-in-out forwards;
+}
+
+@keyframes bg-transition {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
 }
 
 svg {
@@ -54,17 +65,10 @@ svg {
 }
 
 #meretezheto {
-    min-width: 20%;
-    min-height: 100%;
-    max-width: 100%;
-    border: 1px solid #ccc;
+    border: 3px solid blue;
 }
 
 #meretezokar {
     cursor: col-resize;
     background-color: red;
-}
-
-.custom-col-sm-12-md-4 {
-    width: calc(100% / 3);
 }
