@@ -8,6 +8,7 @@
     <title>Bootstrap</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="prism/prism.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 <h1 class="w-100 d-block text-center display-2 mb-3">Miért jó a Bootstrap?</h1>
                 <div class="row row-cols-1 row-cols-lg-3">
                     <div class="col">
-                        <div class="card w-100 h-100">
+                        <div class="card w-100 h-100 pb-3">
                             <div class="card-body d-flex flex-column">
                                 <h2 class="card-title">Egyedi megjelenítés</h2>
                                 <p class="card-text fs-4">Egyedi megjelenítésű bootstrappes:</p>
@@ -86,7 +87,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card w-100 h-100">
+                        <div class="card w-100 h-100 pb-3">
                             <div class="card-body">
                                 <h2 class="card-title">Modern kialakítás</h2>
                                 <p class="card-text fs-4 text-justify">A legtöbb modern oldal
@@ -139,7 +140,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card w-100 h-100">
+                        <div class="card w-100 h-100 pb-3">
                             <div class="card-body">
                                 <h2 class="card-title">Reszponzívitás</h2>
                                 <p class="card-text fs-4 text-justify">Különböző méretű, felbontású
@@ -172,10 +173,68 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-center mb-3">
                 <div class="w-75">
-                    <h1 class="d-block text-center display-2 mb-3">Hogyan telepítsd a Bootstrap-et?</h1>
-                    <div class="progress" role="progressbar">
-                        <div class="progress-bar progress-bar-striped bg-success" style="width: 76%" id="progressbaranimation"></div>
-                      </div>
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <div class="d-flex align-items-center" id="wrapperforwidth">
+                            <img src="imgs/bootstrap.png" alt="Bootstrap logó" class="img-fluid logo">
+                            <h1 class="d-block text-center display-2 mx-3" id="telepites">Hogyan telepítsd a
+                                Bootstrap-et? </h1>
+                            <img src="imgs/bootstrap.png" alt="Bootstrap logó" class="img-fluid logo">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="progress" role="progressbar" id="progressbarwidth">
+                            <div class="progress-bar progress-bar-striped" id="progressbaranimation"></div>
+                        </div>
+                    </div>
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="row">
+                            <div class="col-1 d-flex align-items-center">
+                                <button class="carousel-control-prev position-relative w-100" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                            </div>
+                            <div class="col-10">
+                                <div class="carousel-inner bg-dark rounded-3 p-3">
+                                    <div class="carousel-item active">
+                                        <h2 class="card-title">Online telepítés</h2>
+                                        <p class="card-text fs-4 text-justify">Nem szükséges a Bootstrap css és js
+                                            fájlök letöltése, így egyszerűbb, de egy kicsivel lehet lassabb.</p>
+                                        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Teszt&lt;/title&gt;
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Teszt&lt;/h1&gt;
+        &lt;p&gt;Teszt p.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="card-title">Offline telepítés</h2>
+                                        <p class="card-text fs-4 text-justify">Nem szükséges a Bootstrap css és js
+                                            fájlök letöltése, így egyszerűbb, de egy kicsivel lehet lassabb.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex align-items-center ">
+                                <button class="carousel-control-next position-relative w-100" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators position-relative">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -224,6 +283,7 @@
     <script src="jquery/jquery.ui.touch-punch.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/javascript.js"></script>
+    <script src="prism/prism.js"></script>
 </body>
 
 </html>

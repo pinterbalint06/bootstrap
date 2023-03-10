@@ -1,5 +1,7 @@
-function meretezhetoRatioSzamolas() {
-  $('#meretezheto').css("min-width", $('#meretezhetoparent').width()*0.3);
+function everyResize() {
+  $(".logo").css("height", $("#telepites").css('font-size'));
+  $("#progressbarwidth").css("width", $("#wrapperforwidth").width());
+  $('#meretezheto').css("min-width", $('#meretezhetoparent').width() * 0.3);
   var meretezhetoRatio = $('#meretezheto').width() / $('#meretezhetoparent').width();
   if (meretezhetoRatio > 0.5 && meretezhetoRatio <= 0.75) {
     $('#meretezheto').children().each(function () {
@@ -19,27 +21,28 @@ function meretezhetoRatioSzamolas() {
 }
 
 $(document).ready(function () {
+  Prism.highlightAll();
   window.onresize = function () {
-    meretezhetoRatioSzamolas();
+    everyResize();
   }
 
-  meretezhetoRatioSzamolas();
+  everyResize();
 
   $('#meretezheto').resizable({
     handles: {
       'e': '#meretezokar'
     },
     containment: "#meretezhetoparent",
-    resize: function( event, ui ) {
+    resize: function (event, ui) {
       $('#meretezheto').css("height", "auto");
     }
   });
 
   $('.change-color').on('click', function () {
     var colorClass = $(this).attr('class').split(' ')[1].replace("btn-", "bg-");
-    $('#szinvalto').addClass('bg-transition').animate({}, 3000, function() {
+    $('#szinvalto').addClass('bg-transition').animate({}, 3000, function () {
       $('#szinvalto').removeClass($('#szinvalto').attr('class').split(' ')[2] + " bg-transition").addClass(colorClass);
-  });
+    });
   });
 
   $("#btn-col-3").click(function () {

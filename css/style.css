@@ -15,7 +15,6 @@
 
 body {
     overflow-x: hidden;
-    /* Prevents horizontal scroll */
     padding-bottom: 200px;
     background-color: #553C7B;
 }
@@ -81,7 +80,8 @@ svg {
 
 #progressbaranimation {
     animation: betolt 10s infinite linear;
-  }
+    background-color: #553C7B;
+}
 
 @keyframes betolt {
     0% {
