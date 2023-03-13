@@ -52,7 +52,7 @@ svg {
     height: 5vh;
 }
 
-.minheight {
+.minheight20vw {
     min-height: 20vw;
 }
 
@@ -91,4 +91,9 @@ svg {
     100% {
         width: 100%;
     }
+}
+
+mark {
+    background-color: unset;
+    border: 1px solid red;
 }

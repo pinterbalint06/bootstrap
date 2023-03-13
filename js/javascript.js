@@ -1,5 +1,5 @@
 function everyResize() {
-  $(".logo").css("height", $("#telepites").css('font-size'));
+  $(".logo").css("height", $("#telepitescim").css('font-size'));
   $("#progressbarwidth").css("width", $("#wrapperforwidth").width());
   $('#meretezheto').css("min-width", $('#meretezhetoparent').width() * 0.3);
   var meretezhetoRatio = $('#meretezheto').width() / $('#meretezhetoparent').width();
@@ -22,6 +22,9 @@ function everyResize() {
 
 $(document).ready(function () {
   Prism.highlightAll();
+
+
+  $('#changea').find('a').attr("target", "_blank");
   window.onresize = function () {
     everyResize();
   }
