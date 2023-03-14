@@ -1,4 +1,5 @@
 function everyResize() {
+  $("#onlinetelepites").css("height", $("#offlinetelepites").height());
   $(".logo").css("height", $("#telepitescim").css('font-size'));
   $("#progressbarwidth").css("width", $("#wrapperforwidth").width());
   $('#meretezheto').css("min-width", $('#meretezhetoparent').width() * 0.3);
@@ -30,6 +31,20 @@ $(document).ready(function () {
   }
 
   everyResize();
+
+  $(".contentchange").click(function () {
+    var nextContent = $(this).attr("class").split(' ').pop();
+    var prevContent = $('.appearfromcenter');
+    prevContent.removeClass("appearfromcenter");
+    prevContent.addClass('vanishtocenterfromsides');
+
+    setTimeout(function () {
+      prevContent.addClass("h0");
+      $('#contentchange-to-' + nextContent).removeClass('h0');
+      $('#contentchange-to-' + nextContent).removeClass('vanishtocenterfromsides');
+      $('#contentchange-to-' + nextContent).addClass('appearfromcenter');
+    }, 600);
+  });
 
   $('#meretezheto').resizable({
     handles: {

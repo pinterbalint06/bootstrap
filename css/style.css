@@ -93,7 +93,27 @@ svg {
     }
 }
 
-mark {
+code mark {
     background-color: unset;
     border: 1px solid red;
+}
+
+.vanishtocenterfromsides {
+    width: 0;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.5s all;
+}
+
+.appearfromcenter {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    margin: auto;
+    transition: 0.5s all;
+}
+
+.h0 {
+    height: 0!important;
 }

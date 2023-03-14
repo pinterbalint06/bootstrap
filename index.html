@@ -195,44 +195,53 @@
                         </div>
                         <div class="col-8">
                             <div class="carousel-inner bg-dark rounded-3 p-3 minheight20vw" id="changea">
-                                <div class="carousel-item active">
-                                    <h2 class="card-title">Online telepítés</h2>
-                                    <p class="card-text fs-4 text-justify">Nem szükséges a Bootstrap css és javascript
-                                        fájlok letöltése, így egyszerűbb, de egy kicsivel lehet lassabb.</p>
-                                    <pre class="language-html line-numbers rounded-5" tabindex="0" data-line="5,6,9,10">
+                                <div class="carousel-item active" id="onlinetelepites">
+                                    <div class="d-flex flex-column h-100">
+                                        <h2 class="card-title">Online telepítés</h2>
+                                        <p class="card-text fs-4 mt-3">Nem szükséges letöltés</p>
+                                        <p class="card-text fs-4">Egyszerűbb</p>
+                                        <p class="card-text fs-4">de minimálisan lehet lasssabb</p>
+                                        <p class="card-text fs-4">Offline weboldalnál nem működik</p>
+                                        <pre class="language-html line-numbers rounded-5 mt-auto" tabindex="0"
+                                            data-line="5,6,9,10" id="onlinetelepitespre">
+                                            <code class="language-html">&lt;!DOCTYPE html&gt;
+                                            &lt;htm lang="hu"&gt;
+                                                &lt;head&gt;
+                                                    &lt;meta charset="UTF-8"&gt;
+                                                    <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"&gt;</mark>
+                                                    <mark>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"&gt;</mark>
+                                                &lt;/head&gt;
+                                                &lt;body&gt;
+                                                    <mark>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"&gt;&lt;/script&gt;</mark>
+                                                    <mark>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"&gt;&lt;/script&gt;</mark>
+                                                &lt;/body&gt;
+                                            &lt;/html&gt;
+                                        </code>
+                                    </pre>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" id="offlinetelepites">
+                                    <h2 class="card-title">Offline telepítés</h2>
+                                    <p class="card-text fs-4 mt-3">Letöltés szükséges</p>
+                                    <p class="card-text fs-4">Kicsivel bonyolultabb</p>
+                                    <p class="card-text fs-4">Gyorsabb</p>
+                                    <p class="card-text fs-4">Offline weboldalnál is működik</p>
+                                    <p class="card-text fs-4 text-justify"><span
+                                            class="text-warning">Letöltés:</span><br>Az Online telepítéses résznél a
+                                        linkekre való jobb kattintással, majd "Link mentése másként"-tel le tudod
+                                        tölteni a fájlokat.</p>
+                                    <pre class="language-html line-numbers rounded-5 mt-auto" tabindex="0"
+                                        data-line="5,6,9,10">
                                         <code class="language-html">&lt;!DOCTYPE html&gt;
                                         &lt;htm lang="hu"&gt;
                                             &lt;head&gt;
                                                 &lt;meta charset="UTF-8"&gt;
                                                 <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"&gt;</mark>
-                                                <mark>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"&gt;</mark>
+                                                <mark>&lt;link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"&gt;</mark>
                                             &lt;/head&gt;
                                             &lt;body&gt;
-                                                <mark>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"&gt;&lt;/script&gt;</mark>
-                                                <mark>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"&gt;&lt;/script&gt;</mark>
-                                            &lt;/body&gt;
-                                        &lt;/html&gt;
-                                    </code>
-                                </pre>
-                                </div>
-                                <div class="carousel-item">
-                                    <h2 class="card-title">Offline telepítés</h2>
-                                    <p class="card-text fs-4 text-justify">Le kell tölteni a Bootstrap css és javascript
-                                        fájlokat, valamivel bonyolultabb, de egy gyorsabb, és akkor is működik ha nincs
-                                        internet. (Ez nagyrészt akkor lehet hasznos, ha valamilyen fajta offline weboldalunk
-                                        van.)</p>
-                                    <p class="card-text fs-4 text-justify">Az Online telepítéses résznél a linkekre való jobb kattintással, majd "Link mentése másként"-tal le tudod tölteni a fájlokat.</p>
-                                    <pre class="language-html line-numbers rounded-5" tabindex="0" data-line="5,6,9,10">
-                                        <code class="language-html">&lt;!DOCTYPE html&gt;
-                                        &lt;htm lang="hu"&gt;
-                                            &lt;head&gt;
-                                                &lt;meta charset="UTF-8"&gt;
-                                                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"&gt;
-                                                &lt;link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"&gt;
-                                            &lt;/head&gt;
-                                            &lt;body&gt;
-                                                &lt;script src="bootstrap/js/jquery-3.6.3.min.js"&gt;&lt;/script&gt;
-                                                &lt;script src="bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+                                                <mark> &lt;script src="bootstrap/js/jquery-3.6.3.min.js"&gt;&lt;/script&gt;</mark>
+                                                <mark>&lt;script src="bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;</mark>
                                             &lt;/body&gt;
                                         &lt;/html&gt;
                                         </code>
@@ -249,8 +258,8 @@
                         </div>
                     </div>
                     <div class="carousel-indicators position-relative">
-                        <button type="button" data-bs-target="#telepites" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#telepites" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#telepites" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                     </div>
@@ -258,18 +267,41 @@
             </div>
         </div>
         <!-- TODO:
-            1. a carouselnel a magasság változás megelőzése
-            2. Egyedi megjelenítésű lista elemeinek bemutatása-->
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <button type="button" class="btn btn-dark change-color mx-1">Dark</button>
-                <button type="button" class="btn btn-danger change-color mx-1">Danger</button>
-                <button type="button" class="btn btn-success change-color mx-1">Success</button>
-                <button type="button" class="btn btn-warning change-color mx-1">Warning</button>
-            </div>
+            1. Egyedi megjelenítésű lista elemeinek bemutatása
+            2. contentchange-nel a magassag simabb atvaltasa-->
+        <div class="row mb-3">
             <div class="col-12">
-                <div class="mw-100 m-3 bg-dark" id="szinvalto">
-
+                <button class="btn btn-primary contentchange tablak">Táblák</button>
+                <button class="btn btn-primary contentchange kepek">Képek</button>
+                <button class="btn btn-primary contentchange gombok">Gombok</button>
+                <button class="btn btn-primary contentchange szinsemak">Színsémák</button>
+                <div class="bg-dark appearfromcenter" id="contentchange-to-tablak">
+                    <p>Táblák</p>
+                </div>
+                <div class="bg-dark vanishtocenterfromsides h0" id="contentchange-to-kepek">
+                    <p>Képek</p>
+                </div>
+                <div class="bg-dark vanishtocenterfromsides h0" id="contentchange-to-gombok">
+                    <p>Gombok</p>
+                </div>
+                <div class="bg-dark vanishtocenterfromsides h0" id="contentchange-to-alert">
+                    <p>Egyedi üzenetek</p>
+                </div>
+                <div class="bg-dark vanishtocenterfromsides h0" id="contentchange-to-szinsemak">
+                    <p>Színsémák</p>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="button" class="btn btn-dark change-color mx-1">Dark</button>
+                            <button type="button" class="btn btn-danger change-color mx-1">Danger</button>
+                            <button type="button" class="btn btn-success change-color mx-1">Success</button>
+                            <button type="button" class="btn btn-warning change-color mx-1">Warning</button>
+                        </div>
+                        <div class="col-12">
+                            <div class="mw-100 m-3 bg-danger" id="szinvalto">
+            
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
