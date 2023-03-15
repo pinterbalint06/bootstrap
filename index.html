@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="prism/prism.css">
+    <link rel="shortcut icon" href="imgs/bootstrap.png" type="image/x-icon">
 </head>
 
 <body>
@@ -16,6 +17,103 @@
         <div class="row focimrow">
             <div class="col-12 d-flex justify-content-center align-items-center focimcol">
                 <h1 class="display-1 text-center focim">Bootstrap</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <div class="d-flex align-items-center" id="wrapperforwidth">
+                        <img src="imgs/bootstrap.png" alt="Bootstrap logó" class="img-fluid logo">
+                        <h1 class="d-block text-center display-1 mx-3" id="telepitescim">Hogyan telepítsd a
+                            Bootstrap-et? </h1>
+                        <img src="imgs/bootstrap.png" alt="Bootstrap logó" class="img-fluid logo">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <div class="progress" role="progressbar" id="progressbarwidth">
+                        <div class="progress-bar progress-bar-striped" id="progressbaranimation"></div>
+                    </div>
+                </div>
+                <div id="telepites" class="carousel slide">
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="carousel-control-prev position-relative w-100 h-100" type="button"
+                                data-bs-target="#telepites" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                        </div>
+                        <div class="col-8">
+                            <div class="carousel-inner bg-dark rounded-3 p-3 minheight20vw" id="changea">
+                                <div class="carousel-item active" id="onlinetelepites">
+                                    <div class="d-flex flex-column h-100">
+                                        <h2 class="card-title">Online telepítés</h2>
+                                        <p class="card-text fs-4 mt-3">Nem szükséges letöltés</p>
+                                        <p class="card-text fs-4">Egyszerűbb</p>
+                                        <p class="card-text fs-4">de minimálisan lehet lasssabb</p>
+                                        <p class="card-text fs-4">Offline weboldalnál nem működik</p>
+                                        <pre class="language-html line-numbers rounded-5 mt-auto" tabindex="0"
+                                            data-line="5,6,9,10" id="onlinetelepitespre">
+                                            <code class="language-html">&lt;!DOCTYPE html&gt;
+                                            &lt;htm lang="hu"&gt;
+                                                &lt;head&gt;
+                                                    &lt;meta charset="UTF-8"&gt;
+                                                    <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"&gt;</mark>
+                                                    <mark>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"&gt;</mark>
+                                                &lt;/head&gt;
+                                                &lt;body&gt;
+                                                    <mark>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"&gt;&lt;/script&gt;</mark>
+                                                    <mark>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"&gt;&lt;/script&gt;</mark>
+                                                &lt;/body&gt;
+                                            &lt;/html&gt;
+                                        </code>
+                                    </pre>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" id="offlinetelepites">
+                                    <h2 class="card-title">Offline telepítés</h2>
+                                    <p class="card-text fs-4 mt-3">Letöltés szükséges</p>
+                                    <p class="card-text fs-4">Kicsivel bonyolultabb</p>
+                                    <p class="card-text fs-4">Gyorsabb</p>
+                                    <p class="card-text fs-4">Offline weboldalnál is működik</p>
+                                    <p class="card-text fs-4 text-justify"><span
+                                            class="text-warning">Letöltés:</span><br>Az Online telepítéses résznél a
+                                        linkekre való jobb kattintással, majd "Link mentése másként"-tel le tudod
+                                        tölteni a fájlokat.</p>
+                                    <pre class="language-html line-numbers rounded-5 mt-auto" tabindex="0"
+                                        data-line="5,6,9,10">
+                                        <code class="language-html">&lt;!DOCTYPE html&gt;
+                                        &lt;htm lang="hu"&gt;
+                                            &lt;head&gt;
+                                                &lt;meta charset="UTF-8"&gt;
+                                                <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"&gt;</mark>
+                                                <mark>&lt;link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"&gt;</mark>
+                                            &lt;/head&gt;
+                                            &lt;body&gt;
+                                                <mark> &lt;script src="bootstrap/js/jquery-3.6.3.min.js"&gt;&lt;/script&gt;</mark>
+                                                <mark>&lt;script src="bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;</mark>
+                                            &lt;/body&gt;
+                                        &lt;/html&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <button class="carousel-control-next position-relative w-100 h-100" type="button"
+                                data-bs-target="#telepites" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators position-relative">
+                        <button type="button" data-bs-target="#telepites" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#telepites" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row mx-md-5 mb-3">
@@ -169,136 +267,157 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 mb-3">
-                <div class="d-flex justify-content-center align-items-center mb-3">
-                    <div class="d-flex align-items-center" id="wrapperforwidth">
-                        <img src="imgs/bootstrap.png" alt="Bootstrap logó" class="img-fluid logo">
-                        <h1 class="d-block text-center display-2 mx-3" id="telepitescim">Hogyan telepítsd a
-                            Bootstrap-et? </h1>
-                        <img src="imgs/bootstrap.png" alt="Bootstrap logó" class="img-fluid logo">
+        <!-- TODO:
+            1. Egyedi megjelenítésű lista elemeinek bemutatása
+            2. Egyedi megjelenítésű táblák befejezése-->
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="w-75 mx-auto d-flex justify-content-center flex-column">
+                    <div class="btn-group mb-3 mx-auto">
+                        <button class="btn btn-primary contentchange tablak">Táblák</button>
+                        <button class="btn btn-primary contentchange kepek">Képek</button>
+                        <button class="btn btn-primary contentchange gombok">Gombok</button>
+                        <button class="btn btn-primary contentchange szinsemak">Színsémák</button>
                     </div>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <div class="progress" role="progressbar" id="progressbarwidth">
-                        <div class="progress-bar progress-bar-striped" id="progressbaranimation"></div>
-                    </div>
-                </div>
-                <div id="telepites" class="carousel slide">
-                    <div class="row">
-                        <div class="col-2">
-                            <button class="carousel-control-prev position-relative w-100 h-100" type="button"
-                                data-bs-target="#telepites" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                        </div>
-                        <div class="col-8">
-                            <div class="carousel-inner bg-dark rounded-3 p-3 minheight20vw" id="changea">
-                                <div class="carousel-item active" id="onlinetelepites">
-                                    <div class="d-flex flex-column h-100">
-                                        <h2 class="card-title">Online telepítés</h2>
-                                        <p class="card-text fs-4 mt-3">Nem szükséges letöltés</p>
-                                        <p class="card-text fs-4">Egyszerűbb</p>
-                                        <p class="card-text fs-4">de minimálisan lehet lasssabb</p>
-                                        <p class="card-text fs-4">Offline weboldalnál nem működik</p>
-                                        <pre class="language-html line-numbers rounded-5 mt-auto" tabindex="0"
-                                            data-line="5,6,9,10" id="onlinetelepitespre">
-                                            <code class="language-html">&lt;!DOCTYPE html&gt;
-                                            &lt;htm lang="hu"&gt;
-                                                &lt;head&gt;
-                                                    &lt;meta charset="UTF-8"&gt;
-                                                    <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"&gt;</mark>
-                                                    <mark>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"&gt;</mark>
-                                                &lt;/head&gt;
-                                                &lt;body&gt;
-                                                    <mark>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"&gt;&lt;/script&gt;</mark>
-                                                    <mark>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"&gt;&lt;/script&gt;</mark>
-                                                &lt;/body&gt;
-                                            &lt;/html&gt;
-                                        </code>
-                                    </pre>
+                    <div class="bg-dark activecontent rounded-4 p-3" id="tablak">
+                        <h2 class="display-2 text-center">Táblák</h2>
+                        <div class="row">
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                <p class="fs-2 mb-0 fw-bold">Színek:</p>
+                                <p class="fs-5 mb-2">table-<span class="text-warning">szín neve</span></p>
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzinek" id="tableAlap" value="alap" checked>
+                                        <label class="form-check-label" for="tableAlap">Alap</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzinek" id="tablePrimary" value="primary">
+                                        <label class="form-check-label text-primary" for="tablePrimary">Primary</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzinek" id="tableSecondary" value="secondary">
+                                        <label class="form-check-label text-secondary"
+                                            for="tableSecondary">Secondary</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzinek" id="tableSuccess" value="success">
+                                        <label class="form-check-label text-success" for="tableSuccess">Success</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzinek" id="tableDanger" value="danger">
+                                        <label class="form-check-label text-danger" for="tableDanger">Danger</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzinek" id="tableWarning" value="warning">
+                                        <label class="form-check-label text-warning" for="tableWarning">Warning</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzinek" id="tableInfo" value="info">
+                                        <label class="form-check-label text-info" for="tableInfo">Info</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzinek" id="tableDark" value="dark">
+                                        <label class="form-check-label text-dark feherkorvonal" for="tableDark">Dark</label>
                                     </div>
                                 </div>
-                                <div class="carousel-item" id="offlinetelepites">
-                                    <h2 class="card-title">Offline telepítés</h2>
-                                    <p class="card-text fs-4 mt-3">Letöltés szükséges</p>
-                                    <p class="card-text fs-4">Kicsivel bonyolultabb</p>
-                                    <p class="card-text fs-4">Gyorsabb</p>
-                                    <p class="card-text fs-4">Offline weboldalnál is működik</p>
-                                    <p class="card-text fs-4 text-justify"><span
-                                            class="text-warning">Letöltés:</span><br>Az Online telepítéses résznél a
-                                        linkekre való jobb kattintással, majd "Link mentése másként"-tel le tudod
-                                        tölteni a fájlokat.</p>
-                                    <pre class="language-html line-numbers rounded-5 mt-auto" tabindex="0"
-                                        data-line="5,6,9,10">
-                                        <code class="language-html">&lt;!DOCTYPE html&gt;
-                                        &lt;htm lang="hu"&gt;
-                                            &lt;head&gt;
-                                                &lt;meta charset="UTF-8"&gt;
-                                                <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"&gt;</mark>
-                                                <mark>&lt;link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"&gt;</mark>
-                                            &lt;/head&gt;
-                                            &lt;body&gt;
-                                                <mark> &lt;script src="bootstrap/js/jquery-3.6.3.min.js"&gt;&lt;/script&gt;</mark>
-                                                <mark>&lt;script src="bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;</mark>
-                                            &lt;/body&gt;
-                                        &lt;/html&gt;
-                                        </code>
-                                    </pre>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                <p class="fs-2 mb-0 fw-bold">Csíkok:</p>
+                                <p class="fs-5">table-striped - Minden második sort sötétebbé tesz</p>
+                                <p class="fs-5">table-striped-columns - Minden második oszlopot sötétebbé tesz</p>
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="checkbox"
+                                            name="tableCsikozas" id="sorokCsikozasa" value="table-striped">
+                                        <label class="form-check-label" for="sorokCsikozasa">Sorok csíkozása (table-striped)</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="checkbox"
+                                            name="tableCsikozas" id="oszlopokCsikozasa" value="table-striped-columns">
+                                        <label class="form-check-label" for="oszlopokCsikozasa">Oszlopok
+                                            csíkozása (table-striped-columns)</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <button class="carousel-control-next position-relative w-100 h-100" type="button"
-                                data-bs-target="#telepites" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                        <table class="table alapszin" id="tableTeszt">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Keresztnév</th>
+                                    <th scope="col">Vezetéknév</th>
+                                    <th scope="col">Karakter</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Chris</td>
+                                    <td>Evans</td>
+                                    <td>Amerika kapitány</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Henry</td>
+                                    <td>Cavill</td>
+                                    <td>Szuperman</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Chris</td>
+                                    <td>Hemsworth</td>
+                                    <td>Thor</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="carousel-indicators position-relative">
-                        <button type="button" data-bs-target="#telepites" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#telepites" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
+                    <div class="bg-dark d-none rounded-4 p-3" id="kepek">
+                        <h2 class="display-2 text-center">Képek</h2>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- TODO:
-            1. Egyedi megjelenítésű lista elemeinek bemutatása
-            2. contentchange-nel a magassag simabb atvaltasa-->
-        <div class="row mb-3">
-            <div class="col-12">
-                <button class="btn btn-primary contentchange tablak">Táblák</button>
-                <button class="btn btn-primary contentchange kepek">Képek</button>
-                <button class="btn btn-primary contentchange gombok">Gombok</button>
-                <button class="btn btn-primary contentchange szinsemak">Színsémák</button>
-                <div class="bg-dark appearfromcenter" id="contentchange-to-tablak">
-                    <p>Táblák</p>
-                </div>
-                <div class="bg-dark vanishtocenterfromsides h0" id="contentchange-to-kepek">
-                    <p>Képek</p>
-                </div>
-                <div class="bg-dark vanishtocenterfromsides h0" id="contentchange-to-gombok">
-                    <p>Gombok</p>
-                </div>
-                <div class="bg-dark vanishtocenterfromsides h0" id="contentchange-to-alert">
-                    <p>Egyedi üzenetek</p>
-                </div>
-                <div class="bg-dark vanishtocenterfromsides h0" id="contentchange-to-szinsemak">
-                    <p>Színsémák</p>
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-center">
-                            <button type="button" class="btn btn-dark change-color mx-1">Dark</button>
-                            <button type="button" class="btn btn-danger change-color mx-1">Danger</button>
-                            <button type="button" class="btn btn-success change-color mx-1">Success</button>
-                            <button type="button" class="btn btn-warning change-color mx-1">Warning</button>
-                        </div>
-                        <div class="col-12">
-                            <div class="mw-100 m-3 bg-danger" id="szinvalto">
-            
+                    <div class="bg-dark d-none rounded-4 p-3" id="gombok">
+                        <h2 class="display-2 text-center">Gombok</h2>
+                    </div>
+                    <div class="bg-dark d-none rounded-4 p-3" id="uzenetek">
+                        <h2 class="display-2 text-center">Üzenetek</h2>
+                    </div>
+                    <div class="bg-dark d-none rounded-4 p-3" id="szinsemak">
+                        <h2 class="display-2 text-center">Színsémák</h2>
+                        <p class="fs-4 text-justify">Ezeket a színsémákat használni tudod háttérnél (bg-<span
+                                class="text-warning">színséma neve kisbetűkkel</span>), gomboknál (btn btn-<span
+                                class="text-warning">színséma neve kisbetűkkel</span>), szegélyeknél (border
+                            border-<span class="text-warning">színséma neve kisbetűkkel</span>) és a legtöbb színezhető
+                            bootstrappes elemnél hasonlóan használható.</p>
+                        <p class="fs-4 text-justify">A subtle verziók általában az adott szín egy sötétebb árnyalata.
+                            Ezeket az alap osztálynév végére való -subtle írással tudod használni.</p>
+                        <p class="fs-3 text-warning fw-bold">Példák:</p>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center flex-wrap">
+                                <div class="flex-1 m-2">
+                                    <input type="checkbox" class="btn-check" id="kifinomultszinek" autocomplete="off">
+                                    <label class="btn btn-outline-primary w-100 h-100 border"
+                                        for="kifinomultszinek">Subtle
+                                        verziók</label>
+                                </div>
+                                <button type="button" class="btn btn-primary change-color m-2">Primary</button>
+                                <button type="button" class="btn btn-secondary change-color m-2">Secondary</button>
+                                <button type="button" class="btn btn-success change-color m-2">Success</button>
+                                <button type="button" class="btn btn-danger change-color m-2">Danger</button>
+                                <button type="button" class="btn btn-warning change-color m-2">Warning</button>
+                                <button type="button" class="btn btn-info change-color m-2">Info</button>
+                                <button type="button" class="btn btn-light change-color m-2">Light</button>
+                                <button type="button"
+                                    class="btn btn-dark change-color m-2 border border-1 border-light">Dark</button>
+                            </div>
+                            <div class="col-12">
+                                <div class="mw-100 m-2 border border-1 border-light bg-primary" id="szinvalto"></div>
                             </div>
                         </div>
                     </div>
@@ -336,8 +455,8 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <script src="jquery/jquery.ui.touch-punch.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/javascript.js"></script>
     <script src="prism/prism.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>

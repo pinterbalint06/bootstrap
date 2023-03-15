@@ -24,6 +24,15 @@ body {
     transition: background-color 1s ease-in-out;
 }
 
+.change-color {
+    flex: 1;
+    --bs-btn-hover-color: white;
+}
+
+.flex1 {
+    flex: 1;
+}
+
 .bg-transition {
     background-image: linear-gradient(to right, #007bff, #ff0000);
     animation: bg-transition 3s ease-in-out forwards;
@@ -83,6 +92,10 @@ svg {
     background-color: #553C7B;
 }
 
+.feherkorvonal {
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
 @keyframes betolt {
     0% {
         width: 0;
@@ -98,22 +111,100 @@ code mark {
     border: 1px solid red;
 }
 
-.vanishtocenterfromsides {
-    width: 0;
-    margin: auto;
-    white-space: nowrap;
-    overflow: hidden;
-    transition: 0.5s all;
+.kicsuszas {
+    -webkit-animation: kicsuszas 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+    animation: kicsuszas 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
 
-.appearfromcenter {
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-    margin: auto;
-    transition: 0.5s all;
+@-webkit-keyframes kicsuszas {
+    0% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);
+        transform: translateX(1000px) scaleX(2) scaleY(0.2);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
 }
 
-.h0 {
-    height: 0!important;
+@keyframes kicsuszas {
+    0% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(1000px) scaleX(2) scaleY(0.2);
+        transform: translateX(1000px) scaleX(2) scaleY(0.2);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+}
+
+.becsuszas {
+    -webkit-animation: becsuszas 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: becsuszas 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@-webkit-keyframes becsuszas {
+    0% {
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes becsuszas {
+    0% {
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
 }

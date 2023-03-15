@@ -22,28 +22,32 @@ function everyResize() {
 }
 
 $(document).ready(function () {
-  Prism.highlightAll();
-
-
-  $('#changea').find('a').attr("target", "_blank");
+  everyResize();
   window.onresize = function () {
     everyResize();
   }
-
-  everyResize();
+  Prism.highlightAll();
+  $('#changea').find('a').attr("target", "_blank");
 
   $(".contentchange").click(function () {
-    var nextContent = $(this).attr("class").split(' ').pop();
-    var prevContent = $('.appearfromcenter');
-    prevContent.removeClass("appearfromcenter");
-    prevContent.addClass('vanishtocenterfromsides');
+    $(".contentchange").attr("disabled", true);
+    var nextContent = $("#" + $(this).attr("class").split(' ').pop())
+    var prevContent = $('.activecontent');
+    prevContent.removeClass('activecontent');
+    prevContent.addClass('kicsuszas');
 
-    setTimeout(function () {
-      prevContent.addClass("h0");
-      $('#contentchange-to-' + nextContent).removeClass('h0');
-      $('#contentchange-to-' + nextContent).removeClass('vanishtocenterfromsides');
-      $('#contentchange-to-' + nextContent).addClass('appearfromcenter');
+    setTimeout(() => {
+      prevContent.removeClass('kicsuszas');
+      prevContent.addClass('d-none');
+      nextContent.removeClass("d-none");
+      nextContent.addClass("becsuszas");
     }, 600);
+
+    setTimeout(() => {
+      nextContent.addClass("activecontent");
+      nextContent.removeClass("becsuszas");
+      $(".contentchange").attr("disabled", false);
+    }, 1200);
   });
 
   $('#meretezheto').resizable({
@@ -56,10 +60,51 @@ $(document).ready(function () {
     }
   });
 
+  $("#kifinomultszinek").on("change", function () {
+    if ($(this).is(":checked")) {
+      $('.change-color').each(function () {
+        var currColor = $(this).attr("class").split(" ")[1].split("-")[1];
+        $(this).text(currColor.charAt(0).toUpperCase() + currColor.slice(1) + " Subtle");
+        if (currColor == "warning" || currColor == "info" || currColor == "light") {
+          $(this).addClass("text-white");
+        }
+        $(this).addClass("bg-" + currColor + "-subtle");
+      });
+    } else {
+      $('.change-color').each(function () {
+        var currColor = $(this).attr("class").split(" ")[1].split("-")[1];
+        $(this).text(currColor.charAt(0).toUpperCase() + currColor.slice(1));
+        $(this).removeClass("bg-" + currColor + "-subtle");
+        $(this).removeClass("text-white");
+      });
+    }
+  });
+
+  $(".table-buttons").change(function () {
+    if ($(this).attr("name") == "tableSzinek") {
+      if ($(this).attr("value") == "alap") {
+        $("#tableTeszt").attr("class", "table alapszin " + $("#tableTeszt").attr("class").split(" ").slice(2).join(" "));
+      } else {
+        $("#tableTeszt").attr("class", "table " + "table-" + $(this).attr("value") + " " + $("#tableTeszt").attr("class").split(" ").slice(2).join(" "));
+      }
+    } else if ($(this).attr("name") == "tableCsikozas") {
+      if ($("#tableTeszt").hasClass($(this).attr("value"))) {
+        $("#tableTeszt").removeClass($(this).attr("value"));
+      } else {
+        $("#tableTeszt").addClass($(this).attr("value"));
+      }
+    }
+  });
+
   $('.change-color').on('click', function () {
-    var colorClass = $(this).attr('class').split(' ')[1].replace("btn-", "bg-");
+    if ($("#kifinomultszinek").is(":checked")) {
+      var colorClass = $(this).attr('class').split(' ')[1].replace("btn-", "bg-") + "-subtle";
+    } else {
+      var colorClass = $(this).attr('class').split(' ')[1].replace("btn-", "bg-");
+    }
     $('#szinvalto').addClass('bg-transition').animate({}, 3000, function () {
-      $('#szinvalto').removeClass($('#szinvalto').attr('class').split(' ')[2] + " bg-transition").addClass(colorClass);
+      var classok = $('#szinvalto').attr('class').split(' ');
+      $('#szinvalto').removeClass(classok[classok.length - 2] + " bg-transition").addClass(colorClass);
     });
   });
 
