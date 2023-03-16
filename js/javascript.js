@@ -37,8 +37,8 @@ $(document).ready(function () {
     prevContent.addClass('kicsuszas');
 
     setTimeout(() => {
-      prevContent.removeClass('kicsuszas');
       prevContent.addClass('d-none');
+      prevContent.removeClass('kicsuszas');
       nextContent.removeClass("d-none");
       nextContent.addClass("becsuszas");
     }, 600);
@@ -60,6 +60,8 @@ $(document).ready(function () {
     }
   });
 
+  // KIFINOMULT SZINEK BEKAPCSOLASA A SZINVALTOZTATO KERETNEL
+
   $("#kifinomultszinek").on("change", function () {
     if ($(this).is(":checked")) {
       $('.change-color').each(function () {
@@ -80,8 +82,10 @@ $(document).ready(function () {
     }
   });
 
+  // EGYEDI MEGJELENITESU DOLGOK GOMBJAI
+
   $(".table-buttons").change(function () {
-    if ($(this).attr("name") == "tableSzinek") {
+    if ($(this).attr("name") == "tableSzinek") {  // TABLAS RESZ ITT KEZDODIK
       var valtoztatosokElottiSzin = $("[elozoszin]").attr("elozoszin");
       if ($("[elozoszin]").attr("elozoszin") == "alap") {
         $("#tableTeszt").addClass("table-" + $(this).attr("value"));
@@ -132,13 +136,72 @@ $(document).ready(function () {
         $("#tableTeszt").removeClass("border-" + $("[elozoszin]").attr("elozoszin"));
       }
     } else if ($(this).attr("name") == "tableEgyebek") {
-      if ($("#tableTeszt").hasClass($(this).attr("value"))) {
-        $("#tableTeszt").removeClass($(this).attr("value"));
+      $("#tableTeszt").toggleClass($(this).attr("value"));
+    } else if ($(this).attr("name") == "kepekMeret") { // KEPES RESZ ITT KEZDODIK
+      $('[kepekegyszerudisable]').attr("disabled", true);
+
+      if ($("#kepTeszt").hasClass("w-50")) {
+        $("#kepTeszt").toggleClass("w-100 w-50", 800);
+        setTimeout(() => {
+          $("#kepTeszt").toggleClass("w-100 img-fluid");
+        }, 800);
       } else {
-        $("#tableTeszt").addClass($(this).attr("value"));
+        $("#kepTeszt").toggleClass("img-fluid w-100");
+        $("#kepTeszt").toggleClass("w-100 w-50", 800);
       }
+
+      setTimeout(() => {
+        $('[kepekegyszerudisable]').removeAttr("disabled");
+      }, 800);
+    } else if ($(this).attr("name") == "kepekKerekites") {
+      $('[kepekegyszerudisable]').attr("disabled", true);
+
+      if ($(this).attr("value") == "rounded" || $(this).attr("value") == "rounded-circle") {
+        if ($("#kepTeszt").hasClass("rounded") || $("#kepTeszt").hasClass("rounded-circle")) {
+          $("#kepTeszt").toggleClass("rounded rounded-circle", 800);
+        } else {
+          $("#kepTeszt").addClass($(this).attr("value"));
+        }
+      } else {
+        $('[kepekegyszerudisable]').attr("disabled", true);
+        $("#kepTeszt").removeClass("rounded");
+        $("#kepTeszt").removeClass("rounded-circle");
+      }
+
+      setTimeout(() => {
+        $('[kepekegyszerudisable]').removeAttr("disabled");
+      }, 800);
+    } else if ($(this).attr("name") == "kepekPosition") {
+      $('[kepekegyszerudisable]').attr("disabled", true);
+
+      if ($("#kepTeszt").hasClass('w-50')) {
+        if ($("#kepTeszt").hasClass('mx-auto d-block')) {
+          $("#kepTeszt").addClass("balra-animation");
+        } else {
+          $("#kepTeszt").addClass("kozepre-animation");
+        }
+        setTimeout(() => {
+          $("#kepTeszt").toggleClass('mx-auto d-block');
+          $("#kepTeszt").removeClass("kozepre-animation");
+          $("#kepTeszt").removeClass("balra-animation");
+        }, 800);
+      } else {
+        $("#kepTeszt").toggleClass('mx-auto d-block');
+      }
+
+      setTimeout(() => {
+        $('[kepekegyszerudisable]').removeAttr("disabled");
+      }, 800);
+    } else if ($(this).attr("name") == "kepekSzegely") {
+      $('[kepekegyszerudisable]').attr("disabled", true);
+      $("#kepTeszt").toggleClass('img-thumbnail');
+      setTimeout(() => {
+        $('[kepekegyszerudisable]').removeAttr("disabled");
+      }, 800);
     }
   });
+
+  // SZINVALTOZTATO KERET GOMBJAI
 
   $('.change-color').on('click', function () {
     if ($("#kifinomultszinek").is(":checked")) {
@@ -151,6 +214,8 @@ $(document).ready(function () {
       $('#szinvalto').removeClass(classok[classok.length - 2] + " bg-transition").addClass(colorClass);
     });
   });
+
+  // COLOK MUTATÁSA
 
   $("#btn-col-3").click(function () {
     $("#cols").children().slideUp(500, function () {

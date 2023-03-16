@@ -92,6 +92,40 @@ svg {
     background-color: #553C7B;
 }
 
+#kepTeszt {
+    min-width: 50%;
+    max-width: 100%;
+    transition: width 0.8s ease, height 0.8s ease, border-radius 0.8s ease, border 0.8s ease, padding 0.8s ease;
+}
+
+.kozepre-animation {
+    animation: kozepre 0.8s ease;
+}
+
+.balra-animation {
+    animation: balra 0.8s ease;
+}
+
+@keyframes kozepre {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+@keyframes balra {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .feherkorvonal {
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }

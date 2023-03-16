@@ -269,7 +269,8 @@
         </div>
         <!-- TODO:
             1. Egyedi megjelenítésű lista elemeinek bemutatása
-            2. Egyedi megjelenítésű táblák befejezése-->
+            2. Egyedi megjelenítésű gombok befejezése
+            2. Egyedi megjelenítésű üzenetek befejezése-->
         <div class="row mb-3">
             <div class="col-12">
                 <div class="w-75 mx-auto d-flex justify-content-center flex-column">
@@ -427,27 +428,62 @@
                     </div>
                     <div class="bg-dark d-none rounded-4 p-3" id="kepek">
                         <h2 class="display-2 text-center">Képek</h2>
-                        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
-                            <p class="fs-2 mb-0 fw-bold">Csíkok:</p>
-                            <p class="fs-5">table-striped - Minden második sort kitűnővé tesz</p>
-                            <p class="fs-5">table-striped-columns - Minden második oszlopot kitűnővé tesz</p>
-                            <div class="d-flex flex-row flex-wrap">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input table-buttons" type="checkbox" name="tableCsikozas"
-                                        id="a" value="table-striped">
-                                    <label class="form-check-label" for="sorokCsikozasa">Sorok csíkozása
-                                        (table-striped)</label>
+                        <div class="row">
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                <p class="fs-2 mb-0 fw-bold">Méret és Pozició:</p>
+                                <p class="fs-5">w-50 - Az őt körülvevő elem szélességének 50%-a lesz a kép</p>
+                                <p class="fs-5">img-fluid - A kép maximum szélességét az őt körülvevő elem szélességének
+                                    100%-rá állítja</p>
+                                <p class="fs-5">d-block mx-auto - Középre helyezi a képet</p>
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio" name="kepekMeret"
+                                            id="w50" value="w-50" kepekegyszerudisable checked>
+                                        <label class="form-check-label" for="w50">w-50</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio" name="kepekMeret"
+                                            id="imgfluid" value="img-fluid" kepekegyszerudisable>
+                                        <label class="form-check-label" for="imgfluid">img-fluid</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="checkbox"
+                                            name="kepekPosition" id="kozepre" value="d-block mx-auto" kepekegyszerudisable>
+                                        <label class="form-check-label" for="imgfluid">d-block mx-auto</label>
+                                    </div>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input table-buttons" type="checkbox" name="tableCsikozas"
-                                        id="f" value="table-striped-columns">
-                                    <label class="form-check-label" for="oszlopokCsikozasa">Oszlopok
-                                        csíkozása (table-striped-columns)</label>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                <p class="fs-2 mb-0 fw-bold">Formázások:</p>
+                                <p class="fs-5">rounded - 0.375rem-mel lekerekíti a sarkokat</p>
+                                <p class="fs-5">rounded-circle - 50%-al lekerekíti a sarkokat</p>
+                                <p class="fs-5">img-thumbnail - vékony szegély kerül a kép köré</p>
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio" name="kepekKerekites"
+                                            id="alapKerekites" value="alapKerekites" kepekegyszerudisable checked>
+                                        <label class="form-check-label" for="alapKerekites">Alap</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio" name="kepekKerekites"
+                                            id="rounded" value="rounded" kepekegyszerudisable>
+                                        <label class="form-check-label" for="rounded">rounded</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio" name="kepekKerekites"
+                                            id="roundedCircle" value="rounded-circle" kepekegyszerudisable>
+                                        <label class="form-check-label" for="roundedCircle">rounded-circle</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="checkbox" name="kepekSzegely"
+                                            id="imgthumbnail" value="img-thumbnail" kepekegyszerudisable>
+                                        <label class="form-check-label" for="imgthumbnail">img-thumbnail</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="w-100">
-                            <img class="w-50" src="imgs/roka.jpg"
+                            <img id="kepTeszt" class="w-50" src="imgs/roka.jpg"
                                 alt="A kép nem tölthető be. Próbáld meg frissíteni az oldalt különben ez a rész nem használható!">
                         </div>
                     </div>
