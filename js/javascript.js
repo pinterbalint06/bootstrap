@@ -46,7 +46,7 @@ $(document).ready(function () {
     setTimeout(() => {
       nextContent.addClass("activecontent");
       nextContent.removeClass("becsuszas");
-      $(".contentchange").attr("disabled", false);
+      $(".contentchange").removeAttr("disabled");
     }, 1200);
   });
 
@@ -82,12 +82,56 @@ $(document).ready(function () {
 
   $(".table-buttons").change(function () {
     if ($(this).attr("name") == "tableSzinek") {
-      if ($(this).attr("value") == "alap") {
-        $("#tableTeszt").attr("class", "table alapszin " + $("#tableTeszt").attr("class").split(" ").slice(2).join(" "));
+      var valtoztatosokElottiSzin = $("[elozoszin]").attr("elozoszin");
+      if ($("[elozoszin]").attr("elozoszin") == "alap") {
+        $("#tableTeszt").addClass("table-" + $(this).attr("value"));
+        $("[elozoszin]").removeAttr("elozoszin");
+        $(this).attr("elozoszin", $(this).attr("value"));
       } else {
-        $("#tableTeszt").attr("class", "table " + "table-" + $(this).attr("value") + " " + $("#tableTeszt").attr("class").split(" ").slice(2).join(" "));
+        if ($(this).attr("value") == "alap") {
+          $("#tableTeszt").removeClass("table-" + $("[elozoszin]").attr("elozoszin"));
+        } else {
+          $("#tableTeszt").removeClass("table-" + $("[elozoszin]").attr("elozoszin"));
+          $("#tableTeszt").addClass("table-" + $(this).attr("value"));
+        }
+        $("[elozoszin]").removeAttr("elozoszin",);
+        $(this).attr("elozoszin", $(this).attr("value"));
+      }
+      if ($("[elozoszegely]").attr("elozoszegely") == "table-bordered" && $("[elozoszin]").attr("elozoszin") != "alap") {
+        if ($("#tableTeszt").hasClass("border-" + valtoztatosokElottiSzin)) {
+          $("#tableTeszt").removeClass("border-" + valtoztatosokElottiSzin);
+        }
+        $("#tableTeszt").addClass("border-" + $("[elozoszin]").attr("elozoszin"));
+      } else {
+        $("#tableTeszt").removeClass("border-" + valtoztatosokElottiSzin);
       }
     } else if ($(this).attr("name") == "tableCsikozas") {
+      if ($("#tableTeszt").hasClass($(this).attr("value"))) {
+        $("#tableTeszt").removeClass($(this).attr("value"));
+      } else {
+        $("#tableTeszt").addClass($(this).attr("value"));
+      }
+    } else if ($(this).attr("name") == "tableSzegelyezes") {
+      if ($("[elozoszegely]").attr("elozoszegely") == "alapSzegely") {
+        $("#tableTeszt").addClass($(this).attr("value"));
+        $("[elozoszegely]").removeAttr("elozoszegely");
+        $(this).attr("elozoszegely", $(this).attr("value"));
+      } else {
+        if ($(this).attr("value") == "alapSzegely") {
+          $("#tableTeszt").removeClass($("[elozoszegely]").attr("elozoszegely"));
+        } else {
+          $("#tableTeszt").removeClass($("[elozoszegely]").attr("elozoszegely"));
+          $("#tableTeszt").addClass($(this).attr("value"));
+        }
+        $("[elozoszegely]").removeAttr("elozoszegely",);
+        $(this).attr("elozoszegely", $(this).attr("value"));
+      }
+      if ($("[elozoszegely]").attr("elozoszegely") == "table-bordered" && $("[elozoszin]").attr("elozoszin") != "alap") {
+        $("#tableTeszt").addClass("border-" + $("[elozoszin]").attr("elozoszin"));
+      } else {
+        $("#tableTeszt").removeClass("border-" + $("[elozoszin]").attr("elozoszin"));
+      }
+    } else if ($(this).attr("name") == "tableEgyebek") {
       if ($("#tableTeszt").hasClass($(this).attr("value"))) {
         $("#tableTeszt").removeClass($(this).attr("value"));
       } else {

@@ -288,7 +288,7 @@
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input table-buttons" type="radio"
-                                            name="tableSzinek" id="tableAlap" value="alap" checked>
+                                            name="tableSzinek" id="tableAlap" value="alap" checked elozoszin="alap">
                                         <label class="form-check-label" for="tableAlap">Alap</label>
                                     </div>
                                     <div class="form-check form-check-inline">
@@ -331,8 +331,8 @@
                             </div>
                             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
                                 <p class="fs-2 mb-0 fw-bold">Csíkok:</p>
-                                <p class="fs-5">table-striped - Minden második sort sötétebbé tesz</p>
-                                <p class="fs-5">table-striped-columns - Minden második oszlopot sötétebbé tesz</p>
+                                <p class="fs-5">table-striped - Minden második sort kitűnővé tesz</p>
+                                <p class="fs-5">table-striped-columns - Minden második oszlopot kitűnővé tesz</p>
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input table-buttons" type="checkbox"
@@ -347,8 +347,47 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                <p class="fs-2 mb-0 fw-bold">Szegélyek:</p>
+                                <p class="fs-5">A szegély színe állítható a border-<span class="text-warning">szín</span> osztállyal.</p>
+                                <p class="fs-5">Ebben példában a tábla színe lesz a szegély színe is.</p>
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzegelyezes" id="szegelyekAlap" value="alapSzegely" checked>
+                                        <label class="form-check-label" for="szegelyekAlap" elozoszegely="alap">Alap</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzegelyezes" id="szegelyekSzegelyekkel" value="table-bordered">
+                                        <label class="form-check-label" for="szegelyekSzegelyekkel">Szegélyezett (table-bordered)</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="radio"
+                                            name="tableSzegelyezes" id="szegelyekSzegelyekNElkuli" value="table-borderless">
+                                        <label class="form-check-label" for="szegelyekSzegelyekkel">Semmi szegély (table-borderless)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                <p class="fs-2 mb-0 fw-bold">Egyéb formázások:</p>
+                                <p class="fs-5">table-hover - Kitűnővé teszi a sort amelyiken a kurzor van</p>
+                                <p class="fs-5">table-sm - Lefelezi a cellák belső margóját</p>
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="checkbox"
+                                            name="tableEgyebek" id="egyebekHover" value="table-hover">
+                                        <label class="form-check-label" for="egyebekHover">table-hover</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input table-buttons" type="checkbox"
+                                            name="tableEgyebek" id="egyebekSm" value="table-sm">
+                                        <label class="form-check-label" for="egyebekSm">table-sm</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <table class="table alapszin" id="tableTeszt">
+                        <table class="table" id="tableTeszt">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
