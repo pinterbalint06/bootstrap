@@ -22,12 +22,16 @@ function everyResize() {
 }
 
 $(document).ready(function () {
+  var ikonokMutatva = 0;
+  var alertAlapContent = "";
+  var stringToAdd = "";
   everyResize();
   window.onresize = function () {
     everyResize();
   }
   Prism.highlightAll();
   $('#changea').find('a').attr("target", "_blank");
+
 
   $(".contentchange").click(function () {
     $(".contentchange").attr("disabled", true);
@@ -62,7 +66,7 @@ $(document).ready(function () {
 
   // EGYEDI MEGJELENITESU DOLGOK GOMBJAI
 
-  $(".table-buttons").change(function () {
+  $(".demo-buttons").change(function () {
     if ($(this).attr("name") == "tableSzinek") {  // TABLAS RESZ ITT KEZDODIK
       var valtoztatosokElottiSzin = $("[elozoszin]").attr("elozoszin");
       if ($("[elozoszin]").attr("elozoszin") == "alap") {
@@ -223,6 +227,49 @@ $(document).ready(function () {
           $(this).removeClass("bg-" + currColor + "-subtle");
           $(this).removeClass("text-white");
         });
+      }
+    } else if ($(this).attr("name") == "alertSzinek") { // UZENETES RESZ ITT KEZDODIK
+      $("#alertTeszt").removeClass("alert-" + $("[elozoszinalert]").attr("elozoszinalert"));
+      $("#alertTeszt").addClass("alert-" + $(this).attr("value"));
+      var currValue = $(this).attr("value");
+      if (ikonokMutatva > 0) {
+        $("#ikonokIde").children().each(function () {
+          $(this).toggleClass("text-" + $("[elozoszinalert]").attr("elozoszinalert") + " text-" + currValue);
+        });
+      }
+      $("[elozoszinalert]").removeAttr("elozoszinalert",);
+      $(this).attr("elozoszinalert", $(this).attr("value"));
+    } else if ($(this).attr("name") == "alertIkonok") { // UZENETES RESZ ITT KEZDODIK
+      if (ikonokMutatva > 0) {
+        if ($(this).is(":checked")) {
+          stringToAdd = '<svg class="bi flex-shrink-0 me-2 text-' + $("[elozoszinalert]").attr("elozoszinalert") + '" role="img" id="' + $(this).attr("value") + 'IkonId">\n    <use xlink:href="#' + $(this).attr("value") + '"/>\n</svg>';
+          $("#ikonKodokIde").text(stringToAdd);
+          Prism.highlightElement(document.getElementById("ikonKodokIde"));
+          $("#ikonokIde").append(stringToAdd.replace("\n    ", "").replace("\n", ""));
+          ikonokMutatva = ikonokMutatva + 1;
+        } else {
+          $("#" + $(this).attr("value") + "IkonId").remove();
+          $("#kodIde").children().each(function () {
+            $(this).remove();
+          });;
+          ikonokMutatva = ikonokMutatva - 1;
+          if (ikonokMutatva == 0) {
+            $("#alertTeszt").removeClass("d-flex align-items-center");
+            $("#alertTeszt").html(alertAlapContent);
+          }
+        }
+      } else {
+        if ($(this).is(":checked")) {
+          $("#alertTeszt").addClass("d-flex align-items-center");
+          alertAlapContent = $("#alertTeszt").html();
+          $("#alertTeszt").html("<div id='ikonokIde'></div><div>" + alertAlapContent + "</div>");
+          $("#kodIde").append('<pre class="language-html rounded-2 p-3 mw-100" tabindex="0"><code class="language-html fs-8" id="ikonKodokIde"></code></pre>');
+          stringToAdd = ('<svg class="bi flex-shrink-0 me-2 text-' + $("[elozoszinalert]").attr("elozoszinalert") + '" role="img" id="' + $(this).attr("value") + 'IkonId">\n    <use xlink:href="#' + $(this).attr("value") + '"/>\n</svg>');
+          $("#ikonKodokIde").text(stringToAdd);
+          Prism.highlightElement(document.getElementById("ikonKodokIde"));
+          $("#ikonokIde").append(stringToAdd.replace("\n    ", "").replace("\n", ""));
+          ikonokMutatva = ikonokMutatva + 1;
+        }
       }
     }
   });

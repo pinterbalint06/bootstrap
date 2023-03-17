@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Bootstrap</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/docs.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="prism/prism.css">
     <link rel="shortcut icon" href="imgs/bootstrap.png" type="image/x-icon">
@@ -21,6 +22,10 @@
         </div>
         <div class="row">
             <div class="col-12 mb-3">
+                <div class="w-100 d-flex justify-content-center">
+                    <h5 class="d-block display-5 border border-danger">Ez a weboldal az 5.3-as
+                        Bootstraphez készült!</h5>
+                </div>
                 <div class="d-flex justify-content-center align-items-center mb-3">
                     <div class="d-flex align-items-center" id="wrapperforwidth">
                         <img src="imgs/bootstrap.png" alt="Bootstrap logó" class="img-fluid logo">
@@ -145,7 +150,7 @@
                                     <li class="list-group-item mw-100 minw50">Témák</li>
                                     <li class="list-group-item mw-100 minw50">és még sok más.</li>
                                 </ul>
-                                <div class="d-flex justify-content-evenly align-items-end minh50 mt-auto">
+                                <div class="d-flex justify-content-evenly align-items-end minh50 mt-auto nagyikonok">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-yin-yang" viewbox="0 0 16 16">
                                         <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z" />
@@ -269,64 +274,71 @@
         </div>
         <!-- TODO:
             1. Egyedi megjelenítésű lista elemeinek bemutatása
-            2. Egyedi megjelenítésű gombok befejezése
-            3. Egyedi megjelenítésű üzenetek befejezése-->
+            2. Egyedi megjelenítésű üzenetek befejezése (CSAK AZ UTOLSO IKON KOD VAN OTT JAVITANI)-->
         <div class="row mb-3">
             <div class="col-12">
-                <div class="w-75 mx-auto d-flex justify-content-center flex-column">
-                    <h1 class="d-block text-center display-1 mx-3 mb-3">Főbb egyedi megjelenítésű elemek</h1>
+                <div class="w-75 mx-auto d-flex justify-content-center flex-column overflow-hidden">
+                    <h1 class="d-block text-center display-1 mx-3 mb-1">Főbb egyedi megjelenítésű elemek</h1>
+                    <h6 class="d-block text-center display-6 mx-3 mb-3">A legtöbb böngészőben az F12 megnyomásával meg
+                        tudud nézni a beállított elem osztályait!</h6>
                     <div class="btn-group mb-3 mx-auto">
-                        <button class="btn btn-primary contentchange tablak">Táblák</button>
-                        <button class="btn btn-primary contentchange kepek">Képek</button>
-                        <button class="btn btn-primary contentchange uzenetek">Üzenetek</button>
-                        <button class="btn btn-primary contentchange szinsemak">Színsémák és Gombok</button>
+                        <button class="btn btn-primary contentchange p-2 tablak">Táblák</button>
+                        <button class="btn btn-primary contentchange p-2 kepek">Képek</button>
+                        <button class="btn btn-primary contentchange p-2 uzenetek">Üzenetek</button>
+                        <button class="btn btn-primary contentchange p-2 szinsemak-es-gombok">Színsémák és
+                            Gombok</button>
                     </div>
                     <div class="bg-dark activecontent rounded-4 p-3" id="tablak">
                         <h2 class="display-2 text-center">Táblák</h2>
                         <hr class="border border-light">
                         <div class="row">
+                            <div class="col-12 align-items-center justify-content-center flex-column">
+                                <p class="fs-3 mb-2 text-center">A tábla alap osztálya a <span
+                                        class="text-warning">table</span></p>
+                                <p class="fs-3 mb-2 text-center">Tagje a <span class="text-warning">table</span></p>
+                            </div>
                             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
                                 <p class="fs-2 mb-0 fw-bold">Színek:</p>
                                 <p class="fs-5 mb-2">table-<span class="text-warning">szín neve</span></p>
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="tableSzinek"
+                                        <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
                                             id="tableAlap" value="alap" checked elozoszin="alap">
                                         <label class="form-check-label" for="tableAlap">Alap</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="tableSzinek"
+                                        <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
                                             id="tablePrimary" value="primary">
                                         <label class="form-check-label text-primary" for="tablePrimary">Primary</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="tableSzinek"
+                                        <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
                                             id="tableSecondary" value="secondary">
                                         <label class="form-check-label text-secondary"
                                             for="tableSecondary">Secondary</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="tableSzinek"
+                                        <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
                                             id="tableSuccess" value="success">
                                         <label class="form-check-label text-success" for="tableSuccess">Success</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="tableSzinek"
+                                        <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
                                             id="tableDanger" value="danger">
                                         <label class="form-check-label text-danger" for="tableDanger">Danger</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="tableSzinek"
+                                        <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
                                             id="tableWarning" value="warning">
                                         <label class="form-check-label text-warning" for="tableWarning">Warning</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="tableSzinek"
+                                        <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
                                             id="tableInfo" value="info">
                                         <label class="form-check-label text-info" for="tableInfo">Info</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="tableSzinek"
+                                        <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
                                             id="tableDark" value="dark">
                                         <label class="form-check-label text-dark feherkorvonal"
                                             for="tableDark">Dark</label>
@@ -341,7 +353,7 @@
                                         <p class="fs-5 mt-0">Minden második sort kitűnővé tesz</p>
                                         <div class="w-auto">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input table-buttons" type="checkbox"
+                                                <input class="form-check-input demo-buttons" type="checkbox"
                                                     name="tableCsikozas" id="sorokCsikozasa" value="table-striped">
                                                 <label class="form-check-label" for="sorokCsikozasa">Sorok
                                                     csíkozása</label>
@@ -353,7 +365,7 @@
                                         <p class="fs-5 mt-0">Minden második oszlopot kitűnővé tesz</p>
                                         <div class="w-auto">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input table-buttons" type="checkbox"
+                                                <input class="form-check-input demo-buttons" type="checkbox"
                                                     name="tableCsikozas" id="oszlopokCsikozasa"
                                                     value="table-striped-columns">
                                                 <label class="form-check-label" for="oszlopokCsikozasa">Oszlopok
@@ -370,19 +382,19 @@
                                 <p class="fs-5">Ebben példában a tábla színe lesz a szegély színe is.</p>
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio"
+                                        <input class="form-check-input demo-buttons" type="radio"
                                             name="tableSzegelyezes" id="szegelyekAlap" value="alapSzegely" checked>
                                         <label class="form-check-label" for="szegelyekAlap"
                                             elozoszegely="alap">Alap</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio"
+                                        <input class="form-check-input demo-buttons" type="radio"
                                             name="tableSzegelyezes" id="szegelyekSzegelyekkel" value="table-bordered">
                                         <label class="form-check-label" for="szegelyekSzegelyekkel">Szegélyezett
                                             (table-bordered)</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio"
+                                        <input class="form-check-input demo-buttons" type="radio"
                                             name="tableSzegelyezes" id="szegelyekSzegelyNelkuli"
                                             value="table-borderless">
                                         <label class="form-check-label" for="szegelyekSzegelyNelkuli">Semmi szegély
@@ -399,7 +411,7 @@
                                             <p class="fs-5 mt-0">Kitűnővé teszi a sort amelyiken a kurzor van</p>
                                             <div class="w-auto">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input table-buttons" type="checkbox"
+                                                    <input class="form-check-input demo-buttons" type="checkbox"
                                                         name="tableEgyebek" id="egyebekHover" value="table-hover">
                                                     <label class="form-check-label"
                                                         for="egyebekHover">table-hover</label>
@@ -411,7 +423,7 @@
                                             <p class="fs-5 mt-0">Lefelezi a cellák belső margóját (padding)</p>
                                             <div class="w-auto">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input table-buttons" type="checkbox"
+                                                    <input class="form-check-input demo-buttons" type="checkbox"
                                                         name="tableEgyebek" id="egyebekSm" value="table-sm">
                                                     <label class="form-check-label" for="egyebekSm">table-sm</label>
                                                 </div>
@@ -421,40 +433,43 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table" id="tableTeszt">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Keresztnév</th>
-                                    <th scope="col">Vezetéknév</th>
-                                    <th scope="col">Karakter</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Chris</td>
-                                    <td>Evans</td>
-                                    <td>Amerika kapitány</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Henry</td>
-                                    <td>Cavill</td>
-                                    <td>Szuperman</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Chris</td>
-                                    <td>Hemsworth</td>
-                                    <td>Thor</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table" id="tableTeszt">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Keresztnév</th>
+                                        <th scope="col">Vezetéknév</th>
+                                        <th scope="col">Karakter</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Chris</td>
+                                        <td>Evans</td>
+                                        <td>Amerika kapitány</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Henry</td>
+                                        <td>Cavill</td>
+                                        <td>Szuperman</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Chris</td>
+                                        <td>Hemsworth</td>
+                                        <td>Thor</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="bg-dark d-none rounded-4 p-3" id="kepek">
                         <h2 class="display-2 text-center">Képek</h2>
                         <hr class="border border-light">
+                        <p class="fs-3 mb-2 text-center">Tagje az <span class="text-warning">img</span></p>
                         <div class="row">
                             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
                                 <p class="fs-2 mb-0 fw-bold text-center">Méret és Pozició:</p>
@@ -476,17 +491,17 @@
                                 </div>
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="kepekMeret"
+                                        <input class="form-check-input demo-buttons" type="radio" name="kepekMeret"
                                             id="w50" value="w-50" kepekegyszerudisable checked>
                                         <label class="form-check-label" for="w50">w-50</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="kepekMeret"
+                                        <input class="form-check-input demo-buttons" type="radio" name="kepekMeret"
                                             id="imgfluid" value="img-fluid" kepekegyszerudisable>
                                         <label class="form-check-label" for="imgfluid">img-fluid</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="checkbox"
+                                        <input class="form-check-input demo-buttons" type="checkbox"
                                             name="kepekPosition" id="kozepre" value="d-block mx-auto"
                                             kepekegyszerudisable>
                                         <label class="form-check-label" for="imgfluid">d-block mx-auto</label>
@@ -511,24 +526,23 @@
                                 </div>
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="kepekKerekites"
+                                        <input class="form-check-input demo-buttons" type="radio" name="kepekKerekites"
                                             id="alapKerekites" value="alapKerekites" kepekegyszerudisable checked>
                                         <label class="form-check-label" for="alapKerekites">Alap</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="kepekKerekites"
+                                        <input class="form-check-input demo-buttons" type="radio" name="kepekKerekites"
                                             id="rounded" value="rounded" kepekegyszerudisable>
                                         <label class="form-check-label" for="rounded">rounded</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="radio" name="kepekKerekites"
+                                        <input class="form-check-input demo-buttons" type="radio" name="kepekKerekites"
                                             id="roundedCircle" value="rounded-circle" kepekegyszerudisable>
                                         <label class="form-check-label" for="roundedCircle">rounded-circle</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="checkbox"
-                                            name="kepekSzegely" id="imgthumbnail" value="img-thumbnail"
-                                            kepekegyszerudisable>
+                                        <input class="form-check-input demo-buttons" type="checkbox" name="kepekSzegely"
+                                            id="imgthumbnail" value="img-thumbnail" kepekegyszerudisable>
                                         <label class="form-check-label" for="imgthumbnail">img-thumbnail</label>
                                     </div>
                                 </div>
@@ -542,16 +556,140 @@
                     <div class="bg-dark d-none rounded-4 p-3" id="uzenetek">
                         <h2 class="display-2 text-center">Üzenetek</h2>
                         <hr class="border border-light">
+                        <div class="row">
+                            <div class="col-12 align-items-center justify-content-center flex-column">
+                                <p class="fs-3 mb-2 text-center">Az üzenetek alap osztálya az <span
+                                        class="text-warning">alert</span> és az <span class="text-warning">alert-<span
+                                            class="fw-bold">szín</span></span></p>
+                                <p class="fs-3 mb-2 text-center">Tagje a <span class="text-warning">div</span></p>
+                                <p class="fs-3 mb-2 text-center">Szükséges attríbútom a <span
+                                        class="text-warning">role="alert"</span></p>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-start flex-column">
+                                <p class="fs-2 mb-0 fw-bold">Színek:</p>
+                                <p class="fs-5 mb-2">alert-<span class="text-warning">szín neve</span></p>
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
+                                            id="alertPrimary" value="primary" checked elozoszinalert="primary">
+                                        <label class="form-check-label text-primary" for="alertPrimary">Primary</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
+                                            id="alertSecondary" value="secondary">
+                                        <label class="form-check-label text-secondary"
+                                            for="alertSecondary">Secondary</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
+                                            id="alertSuccess" value="success">
+                                        <label class="form-check-label text-success" for="alertSuccess">Success</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
+                                            id="alertDanger" value="danger">
+                                        <label class="form-check-label text-danger" for="alertDanger">Danger</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
+                                            id="alertWarning" value="warning">
+                                        <label class="form-check-label text-warning" for="alertWarning">Warning</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
+                                            id="alertInfo" value="info">
+                                        <label class="form-check-label text-info" for="alertInfo">Info</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
+                                            id="alertDark" value="dark">
+                                        <label class="form-check-label text-dark feherkorvonal"
+                                            for="alertDark">Dark</label>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                    <symbol id="pipa" viewbox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </symbol>
+                                    <symbol id="infoIBetu" viewbox="0 0 16 16">
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                    </symbol>
+                                    <symbol id="felkialtoJel" viewbox="0 0 16 16">
+                                        <path
+                                            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                    </symbol>
+                                </svg>
+                                <p class="fs-2 mb-0 fw-bold">Ikonok:</p>
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
+                                            id="iBetuIkonCheck" value="infoIBetu">
+                                        <label class="form-check-label text-light" for="iBetuIkonCheck"><svg
+                                                class="bi flex-shrink-0 me-2" role="img">
+                                                <use xlink:href="#infoIBetu" />
+                                            </svg></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
+                                            id="pipaIkonCheck" value="pipa">
+                                        <label class="form-check-label text-light" for="pipaIkonCheck"><svg
+                                                class="bi flex-shrink-0 me-2" role="img">
+                                                <use xlink:href="#pipa" />
+                                            </svg></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
+                                            id="felkialtoJelIkonCheck" value="felkialtoJel">
+                                        <label class="form-check-label text-light" for="felkialtoJelIkonCheck"><svg
+                                                class="bi flex-shrink-0 me-2" role="img">
+                                                <use xlink:href="#felkialtoJel" />
+                                            </svg></label>
+                                    </div>
+                                </div>
+                                <p class="fs-2 mb-0 fw-bold">Ikonok Használata:</p>
+                                <div id="kodIde" class="mw-100">
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                <p class="fs-2 mb-0 fw-bold">Ikonok mentése:</p>
+                                <pre class="language-html rounded-2 p-3 mw-100" tabindex="0">
+                                    <code class="language-html fs-8">
+                                        &lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+                                            &lt;symbol id="check-circle-fill" viewbox="0 0 16 16"&gt;
+                                                &lt;path
+                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" /&gt;
+                                            &lt;/symbol&gt;
+                                            &lt;symbol id="info-fill" viewbox="0 0 16 16"&gt;
+                                                &lt;path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" /&gt;
+                                            &lt;/symbol&gt;
+                                            &lt;symbol id="exclamation-triangle-fill" viewbox="0 0 16 16"&gt;
+                                                &lt;path
+                                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" /&gt;
+                                            &lt;/symbol&gt;
+                                        &lt;/svg&gt;
+                                </code>
+                            </pre>
+                            </div>
+                        </div>
+                        <div class="alert alert-primary" role="alert" id="alertTeszt">
+                            Ez egy teszt üzenet! A link színe igazodik az üzenet színéhez az 'alert-link'
+                            osztállyal <a class="alert-link" href="https://getbootstrap.com" target="_blank">link</a>.
+                        </div>
                     </div>
-                    <div class="bg-dark d-none rounded-4 p-3" id="szinsemak">
+                    <div class="bg-dark d-none rounded-4 p-3" id="szinsemak-es-gombok">
                         <h2 class="display-2 text-center">Színsémák és Gombok</h2>
                         <hr class="border border-light">
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <h3 class="display-3 text-center">Színsémák</h3>
-                                <p class="fs-4 text-justify">Ezeket a színsémákat használni tudod háttérnél (bg-<span
-                                        class="text-warning">színséma neve kisbetűkkel</span>), <mark
-                                        class="text-reset">gomboknál (btn btn-<span class="text-warning">színséma neve
+                                <p class="fs-4 text-justify">Ezeket a színsémákat használni tudod háttérnél
+                                    (bg-<span class="text-warning">színséma neve kisbetűkkel</span>), <mark
+                                        class="text-reset">gomboknál (btn btn-<span class="text-warning">színséma
+                                            neve
                                             kisbetűkkel</span>)</mark>, szegélyeknél (border
                                     border-<span class="text-warning">színséma neve kisbetűkkel</span>) és a legtöbb
                                     színezhető
@@ -562,8 +700,8 @@
                                     írással tudod használni.</p>
                                 <div class="d-flex flex-row flex-wrap justify-content-center">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="checkbox"
-                                            name="subtle" id="kifinomultszinek" value="subtle" kepekegyszerudisable>
+                                        <input class="form-check-input demo-buttons" type="checkbox" name="subtle"
+                                            id="kifinomultszinek" value="subtle" kepekegyszerudisable>
                                         <label class="form-check-label" for="kifinomultszinek">Subtle színek</label>
                                     </div>
                                 </div>
@@ -571,6 +709,27 @@
                             <div class="col-12 col-md-6">
                                 <h3 class="display-3 text-center">Gombok</h3>
                                 <div class="row">
+                                    <div class="col-12  d-flex align-items-center justify-content-center flex-column">
+                                        <p class="fs-3 mb-2 text-center">A gombok alap osztálya a <span
+                                                class="text-warning">btn</span></p>
+
+                                        <p class="fs-3 mb-2 text-center">Tagje a <span
+                                                class="text-warning">button</span>
+                                        </p>
+                                        <p class="fs-3 mb-2 text-center">Szükséges attríbútom a <span
+                                                class="text-warning">type="button"</span></p>
+                                        <p class="fs-2 mb-1 fw-bold text-center">Gombhoz link rendelés:</p>
+                                        <pre class="language-html rounded-2 p-3 mw-100" tabindex="0">
+                                            <code class="language-html">
+                                                &lt;button type="button" class="btn btn-link border border-light" <mark>onclick="location='https://getbootstrap.com/'"</mark>&gt;Ezen a lapon&lt;/button&gt
+                                                &lt;button type="button" class="btn btn-link border border-light" <mark>onclick="window.open('https://getbootstrap.com/')'"</mark>&gt;Új lapon&lt;/button&gt
+                                        </code>
+                                    </pre>
+                                        <button type="button" class="btn btn-link border border-light"
+                                            onclick="location='https://getbootstrap.com/'">Ezen a lapon</button>
+                                        <button type="button" class="btn btn-link border border-light"
+                                            onclick="window.open('https://getbootstrap.com/')">Új lapon</button>
+                                    </div>
                                     <div
                                         class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
                                         <p class="fs-2 mb-0 fw-bold text-center">Méret:</p>
@@ -586,18 +745,18 @@
                                         </div>
                                         <div class="d-flex flex-row flex-wrap">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input table-buttons" type="radio"
+                                                <input class="form-check-input demo-buttons" type="radio"
                                                     name="gombokMeret" id="alapGombMeret" value="alapGombMeret"
                                                     kepekegyszerudisable checked>
                                                 <label class="form-check-label" for="alapGombMeret">Alap</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input table-buttons" type="radio"
+                                                <input class="form-check-input demo-buttons" type="radio"
                                                     name="gombokMeret" id="btnlg" value="btn-lg" kepekegyszerudisable>
                                                 <label class="form-check-label" for="btnlg">btn-lg</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input table-buttons" type="radio"
+                                                <input class="form-check-input demo-buttons" type="radio"
                                                     name="gombokMeret" id="btnsm" value="btn-sm" kepekegyszerudisable>
                                                 <label class="form-check-label" for="btnsm">btn-sm</label>
                                             </div>
@@ -609,7 +768,8 @@
                                         <div class="d-flex flex-wrap text-center justify-content-evenly w-100">
                                             <div class="d-flex flex-column">
                                                 <p class="fs-4 mb-0 fw-bold">disabled</p>
-                                                <p class="fs-5 mt-0">Inaktívvá teszi a gombot, nem lehet megnyomni</p>
+                                                <p class="fs-5 mt-0">Inaktívvá teszi a gombot, nem lehet megnyomni
+                                                </p>
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <p class="fs-4 mb-0 fw-bold">btn-outline-<span
@@ -621,13 +781,13 @@
                                         </div>
                                         <div class="d-flex flex-row flex-wrap">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input table-buttons" type="checkbox"
+                                                <input class="form-check-input demo-buttons" type="checkbox"
                                                     name="gombokDisable" id="disabled" value="disabled"
                                                     kepekegyszerudisable>
                                                 <label class="form-check-label" for="disabled">Disabled</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input table-buttons" type="checkbox"
+                                                <input class="form-check-input demo-buttons" type="checkbox"
                                                     name="gombokOutline" id="btnoutline" value="btn-outline"
                                                     kepekegyszerudisable>
                                                 <label class="form-check-label" for="btnoutline">btn-outline-<span
@@ -652,7 +812,8 @@
                                     class="btn btn-dark change-color m-2 border border-1 border-light">Dark</button>
                             </div>
                             <div class="col-12">
-                                <div class="mw-100 m-2 border border-1 border-light bg-primary" id="szinvalto"></div>
+                                <div class="mw-100 m-2 border border-1 border-light bg-primary" id="szinvalto">
+                                </div>
                             </div>
                         </div>
                     </div>

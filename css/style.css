@@ -30,8 +30,12 @@ body {
     --bs-btn-hover-color: white;
 }
 
-#kifinomultszinek {
+#kifinomultszinek, #alertTeszt, #alertTeszt a {
     transition: all 0.8s ease;
+}
+
+#ikonokIde svg {
+    transition: all 0.4s ease;
 }
 
 #tableTeszt,
@@ -59,9 +63,13 @@ body {
     }
 }
 
-svg {
-    height: 2rem;
-    width: 2rem;
+.nagyikonok svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.fs-8 {
+    font-size: 0.8rem!important;
 }
 
 .minw50 {
