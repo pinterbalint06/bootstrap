@@ -270,18 +270,21 @@
         <!-- TODO:
             1. Egyedi megjelenítésű lista elemeinek bemutatása
             2. Egyedi megjelenítésű gombok befejezése
-            2. Egyedi megjelenítésű üzenetek befejezése-->
+            3. Egyedi megjelenítésű üzenetek befejezése
+            4. TABLAKNAL IS ATALAKITANI A DESIGNT-->
         <div class="row mb-3">
             <div class="col-12">
                 <div class="w-75 mx-auto d-flex justify-content-center flex-column">
+                    <h1 class="d-block text-center display-1 mx-3 mb-3">Főbb egyedi megjelenítésű elemek</h1>
                     <div class="btn-group mb-3 mx-auto">
                         <button class="btn btn-primary contentchange tablak">Táblák</button>
                         <button class="btn btn-primary contentchange kepek">Képek</button>
-                        <button class="btn btn-primary contentchange gombok">Gombok</button>
-                        <button class="btn btn-primary contentchange szinsemak">Színsémák</button>
+                        <button class="btn btn-primary contentchange uzenetek">Üzenetek</button>
+                        <button class="btn btn-primary contentchange szinsemak">Színsémák és Gombok</button>
                     </div>
                     <div class="bg-dark activecontent rounded-4 p-3" id="tablak">
                         <h2 class="display-2 text-center">Táblák</h2>
+                        <hr class="border border-light">
                         <div class="row">
                             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
                                 <p class="fs-2 mb-0 fw-bold">Színek:</p>
@@ -428,13 +431,25 @@
                     </div>
                     <div class="bg-dark d-none rounded-4 p-3" id="kepek">
                         <h2 class="display-2 text-center">Képek</h2>
+                        <hr class="border border-light">
                         <div class="row">
                             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
-                                <p class="fs-2 mb-0 fw-bold">Méret és Pozició:</p>
-                                <p class="fs-5">w-50 - Az őt körülvevő elem szélességének 50%-a lesz a kép</p>
-                                <p class="fs-5">img-fluid - A kép maximum szélességét az őt körülvevő elem szélességének
-                                    100%-rá állítja</p>
-                                <p class="fs-5">d-block mx-auto - Középre helyezi a képet</p>
+                                <p class="fs-2 mb-0 fw-bold text-center">Méret és Pozició:</p>
+                                <div class="d-flex flex-column text-center justify-content-evenly w-100">
+                                    <div class="d-flex flex-column">
+                                        <p class="fs-4 mb-0 fw-bold">w-50</p>
+                                        <p class="fs-5 mt-0">Az őt körülvevő elem szélességének 50%-a lesz a kép</p>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <p class="fs-4 mb-0 fw-bold">img-fluid</p>
+                                        <p class="fs-5 mt-0">A kép maximum szélességét az őt körülvevő elem szélességének
+                                            100%-rá állítja</p>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <p class="fs-4 mb-0 fw-bold">d-block mx-auto</p>
+                                        <p class="fs-5 mt-0">Középre helyezi a képet</p>
+                                    </div>
+                                </div>
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input table-buttons" type="radio" name="kepekMeret"
@@ -448,16 +463,28 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input table-buttons" type="checkbox"
-                                            name="kepekPosition" id="kozepre" value="d-block mx-auto" kepekegyszerudisable>
+                                            name="kepekPosition" id="kozepre" value="d-block mx-auto"
+                                            kepekegyszerudisable>
                                         <label class="form-check-label" for="imgfluid">d-block mx-auto</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
-                                <p class="fs-2 mb-0 fw-bold">Formázások:</p>
-                                <p class="fs-5">rounded - 0.375rem-mel lekerekíti a sarkokat</p>
-                                <p class="fs-5">rounded-circle - 50%-al lekerekíti a sarkokat</p>
-                                <p class="fs-5">img-thumbnail - vékony szegély kerül a kép köré</p>
+                                <p class="fs-2 mb-0 fw-bold text-center">Formázások:</p>
+                                <div class="d-flex flex-column text-center justify-content-evenly w-100">
+                                    <div class="d-flex flex-column mx-2">
+                                        <p class="fs-4 mb-0 fw-bold">rounded</p>
+                                        <p class="fs-5 mt-0">0.375rem-mel lekerekíti a sarkokat</p>
+                                    </div>
+                                    <div class="d-flex flex-column mx-2">
+                                        <p class="fs-4 mb-0 fw-bold">rounded-circle</p>
+                                        <p class="fs-5 mt-0">50%-al lekerekíti a sarkokat</p>
+                                    </div>
+                                    <div class="d-flex flex-column mx-2">
+                                        <p class="fs-4 mb-0 fw-bold">img-thumbnail</p>
+                                        <p class="fs-5 mt-0">vékony szegély kerül a kép köré</p>
+                                    </div>
+                                </div>
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input table-buttons" type="radio" name="kepekKerekites"
@@ -475,8 +502,9 @@
                                         <label class="form-check-label" for="roundedCircle">rounded-circle</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="checkbox" name="kepekSzegely"
-                                            id="imgthumbnail" value="img-thumbnail" kepekegyszerudisable>
+                                        <input class="form-check-input table-buttons" type="checkbox"
+                                            name="kepekSzegely" id="imgthumbnail" value="img-thumbnail"
+                                            kepekegyszerudisable>
                                         <label class="form-check-label" for="imgthumbnail">img-thumbnail</label>
                                     </div>
                                 </div>
@@ -487,22 +515,97 @@
                                 alt="A kép nem tölthető be. Próbáld meg frissíteni az oldalt különben ez a rész nem használható!">
                         </div>
                     </div>
-                    <div class="bg-dark d-none rounded-4 p-3" id="gombok">
-                        <h2 class="display-2 text-center">Gombok</h2>
-                    </div>
                     <div class="bg-dark d-none rounded-4 p-3" id="uzenetek">
                         <h2 class="display-2 text-center">Üzenetek</h2>
+                        <hr class="border border-light">
                     </div>
                     <div class="bg-dark d-none rounded-4 p-3" id="szinsemak">
-                        <h2 class="display-2 text-center">Színsémák</h2>
-                        <p class="fs-4 text-justify">Ezeket a színsémákat használni tudod háttérnél (bg-<span
-                                class="text-warning">színséma neve kisbetűkkel</span>), gomboknál (btn btn-<span
-                                class="text-warning">színséma neve kisbetűkkel</span>), szegélyeknél (border
-                            border-<span class="text-warning">színséma neve kisbetűkkel</span>) és a legtöbb színezhető
-                            bootstrappes elemnél hasonlóan használható.</p>
-                        <p class="fs-4 text-justify">A subtle verziók általában az adott szín egy sötétebb árnyalata.
-                            Ezeket az alap osztálynév végére való -subtle írással tudod használni.</p>
-                        <p class="fs-3 text-warning fw-bold">Példák:</p>
+                        <h2 class="display-2 text-center">Színsémák és Gombok</h2>
+                        <hr class="border border-light">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <h3 class="display-3 text-center">Színsémák</h3>
+                                <p class="fs-4 text-justify">Ezeket a színsémákat használni tudod háttérnél (bg-<span
+                                        class="text-warning">színséma neve kisbetűkkel</span>), <mark
+                                        class="text-reset">gomboknál (btn btn-<span class="text-warning">színséma neve
+                                            kisbetűkkel</span>)</mark>, szegélyeknél (border
+                                    border-<span class="text-warning">színséma neve kisbetűkkel</span>) és a legtöbb
+                                    színezhető
+                                    bootstrappes elemnél hasonlóan használható.</p>
+                                <p class="fs-4 text-justify">A subtle verziók általában az adott szín egy sötétebb
+                                    árnyalata.
+                                    Ezeket az alap osztálynév végére való <span class="text-warning">-subtle</span>
+                                    írással tudod használni.</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="display-3 text-center">Gombok</h3>
+                                <div class="row">
+                                    <div
+                                        class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                        <p class="fs-2 mb-0 fw-bold text-center">Méret:</p>
+                                        <div class="d-flex flex-wrap text-center justify-content-evenly w-100">
+                                            <div class="d-flex flex-column">
+                                                <p class="fs-4 mb-0 fw-bold">btn-lg</p>
+                                                <p class="fs-5 mt-0">Nagy gombok</p>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <p class="fs-4 mb-0 fw-bold">btn-sm</p>
+                                                <p class="fs-5 mt-0">Kis gombok</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row flex-wrap">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input table-buttons" type="radio"
+                                                    name="gombokMeret" id="alapGombMeret" value="alapGombMeret"
+                                                    kepekegyszerudisable checked>
+                                                <label class="form-check-label" for="alapGombMeret">Alap</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input table-buttons" type="radio"
+                                                    name="gombokMeret" id="btnlg" value="btn-lg" kepekegyszerudisable>
+                                                <label class="form-check-label" for="btnlg">btn-lg</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input table-buttons" type="radio"
+                                                    name="gombokMeret" id="btnsm" value="btn-sm" kepekegyszerudisable>
+                                                <label class="form-check-label" for="btnsm">btn-sm</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
+                                        <p class="fs-2 mb-0 fw-bold text-center">Egyebek:</p>
+                                        <div class="d-flex flex-wrap text-center justify-content-evenly w-100">
+                                            <div class="d-flex flex-column">
+                                                <p class="fs-4 mb-0 fw-bold">disabled</p>
+                                                <p class="fs-5 mt-0">Inaktívvá teszi a gombot, nem lehet megnyomni</p>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <p class="fs-4 mb-0 fw-bold">btn-outline-<span class="text-warning">szín</span></p>
+                                                <p class="fs-5 mt-0">A gomb háttere átlátszóva válik csak a körvonal lesz
+                                                    látható és a szöveg beszíneződik az adott színre.</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row flex-wrap">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input table-buttons" type="checkbox"
+                                                    name="gombokEgyebek" id="disabled" value="disabled"
+                                                    kepekegyszerudisable>
+                                                <label class="form-check-label" for="disabled">Disabled</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input table-buttons" type="checkbox"
+                                                    name="gombokEgyebek" id="btnoutline" value="btn-outline"
+                                                    kepekegyszerudisable>
+                                                <label class="form-check-label" for="btnoutline">btn-outline-<span
+                                                        class="text-warning">szín</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="fs-3 text-warning fw-bold">Példák:</p>
+                        </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center flex-wrap">
                                 <div class="flex-1 m-2">

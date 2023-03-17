@@ -198,6 +198,16 @@ $(document).ready(function () {
       setTimeout(() => {
         $('[kepekegyszerudisable]').removeAttr("disabled");
       }, 800);
+    } else if ($(this).attr("name") == "gombokMeret") { // GOMBOS RESZ ITT KEZDODIK
+      if ($(this).attr("value") == "alapGombMeret") {
+        $('.change-color').removeClass("btn-sm btn-lg");
+      } else {
+        if ($('.change-color').hasClass("btn-lg") || $('.change-color').hasClass("btn-sm")) {
+          $('.change-color').toggleClass("btn-sm btn-lg");
+        } else {
+          $('.change-color').addClass($(this).attr("value"));
+        }
+      }
     }
   });
 
