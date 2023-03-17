@@ -270,8 +270,7 @@
         <!-- TODO:
             1. Egyedi megjelenítésű lista elemeinek bemutatása
             2. Egyedi megjelenítésű gombok befejezése
-            3. Egyedi megjelenítésű üzenetek befejezése
-            4. TABLAKNAL IS ATALAKITANI A DESIGNT-->
+            3. Egyedi megjelenítésű üzenetek befejezése-->
         <div class="row mb-3">
             <div class="col-12">
                 <div class="w-75 mx-auto d-flex justify-content-center flex-column">
@@ -336,20 +335,31 @@
                             </div>
                             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
                                 <p class="fs-2 mb-0 fw-bold">Csíkok:</p>
-                                <p class="fs-5">table-striped - Minden második sort kitűnővé tesz</p>
-                                <p class="fs-5">table-striped-columns - Minden második oszlopot kitűnővé tesz</p>
-                                <div class="d-flex flex-row flex-wrap">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="checkbox"
-                                            name="tableCsikozas" id="sorokCsikozasa" value="table-striped">
-                                        <label class="form-check-label" for="sorokCsikozasa">Sorok csíkozása
-                                            (table-striped)</label>
+                                <div class="d-flex flex-wrap text-center justify-content-evenly w-100">
+                                    <div class="d-flex flex-column">
+                                        <p class="fs-4 mb-0 fw-bold">table-striped</p>
+                                        <p class="fs-5 mt-0">Minden második sort kitűnővé tesz</p>
+                                        <div class="w-auto">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input table-buttons" type="checkbox"
+                                                    name="tableCsikozas" id="sorokCsikozasa" value="table-striped">
+                                                <label class="form-check-label" for="sorokCsikozasa">Sorok
+                                                    csíkozása</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="checkbox"
-                                            name="tableCsikozas" id="oszlopokCsikozasa" value="table-striped-columns">
-                                        <label class="form-check-label" for="oszlopokCsikozasa">Oszlopok
-                                            csíkozása (table-striped-columns)</label>
+                                    <div class="d-flex flex-column">
+                                        <p class="fs-4 mb-0 fw-bold">table-striped-columns</p>
+                                        <p class="fs-5 mt-0">Minden második oszlopot kitűnővé tesz</p>
+                                        <div class="w-auto">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input table-buttons" type="checkbox"
+                                                    name="tableCsikozas" id="oszlopokCsikozasa"
+                                                    value="table-striped-columns">
+                                                <label class="form-check-label" for="oszlopokCsikozasa">Oszlopok
+                                                    csíkozása</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -373,27 +383,40 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input table-buttons" type="radio"
-                                            name="tableSzegelyezes" id="szegelyekSzegelyekNElkuli"
+                                            name="tableSzegelyezes" id="szegelyekSzegelyNelkuli"
                                             value="table-borderless">
-                                        <label class="form-check-label" for="szegelyekSzegelyekkel">Semmi szegély
+                                        <label class="form-check-label" for="szegelyekSzegelyNelkuli">Semmi szegély
                                             (table-borderless)</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column">
-                                <p class="fs-2 mb-0 fw-bold">Egyéb formázások:</p>
-                                <p class="fs-5">table-hover - Kitűnővé teszi a sort amelyiken a kurzor van</p>
-                                <p class="fs-5">table-sm - Lefelezi a cellák belső margóját</p>
-                                <div class="d-flex flex-row flex-wrap">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="checkbox"
-                                            name="tableEgyebek" id="egyebekHover" value="table-hover">
-                                        <label class="form-check-label" for="egyebekHover">table-hover</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input table-buttons" type="checkbox"
-                                            name="tableEgyebek" id="egyebekSm" value="table-sm">
-                                        <label class="form-check-label" for="egyebekSm">table-sm</label>
+                                <div class="d-flex flex-wrap text-center justify-content-evenly w-100">
+                                    <p class="fs-2 mb-0 fw-bold">Egyéb formázások:</p>
+                                    <div class="d-flex flex-wrap text-center justify-content-evenly w-100">
+                                        <div class="d-flex flex-column">
+                                            <p class="fs-4 mb-0 fw-bold">table-hover</p>
+                                            <p class="fs-5 mt-0">Kitűnővé teszi a sort amelyiken a kurzor van</p>
+                                            <div class="w-auto">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input table-buttons" type="checkbox"
+                                                        name="tableEgyebek" id="egyebekHover" value="table-hover">
+                                                    <label class="form-check-label"
+                                                        for="egyebekHover">table-hover</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <p class="fs-4 mb-0 fw-bold">table-sm</p>
+                                            <p class="fs-5 mt-0">Lefelezi a cellák belső margóját (padding)</p>
+                                            <div class="w-auto">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input table-buttons" type="checkbox"
+                                                        name="tableEgyebek" id="egyebekSm" value="table-sm">
+                                                    <label class="form-check-label" for="egyebekSm">table-sm</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +465,8 @@
                                     </div>
                                     <div class="d-flex flex-column">
                                         <p class="fs-4 mb-0 fw-bold">img-fluid</p>
-                                        <p class="fs-5 mt-0">A kép maximum szélességét az őt körülvevő elem szélességének
+                                        <p class="fs-5 mt-0">A kép maximum szélességét az őt körülvevő elem
+                                            szélességének
                                             100%-rá állítja</p>
                                     </div>
                                     <div class="d-flex flex-column">
@@ -581,8 +605,10 @@
                                                 <p class="fs-5 mt-0">Inaktívvá teszi a gombot, nem lehet megnyomni</p>
                                             </div>
                                             <div class="d-flex flex-column">
-                                                <p class="fs-4 mb-0 fw-bold">btn-outline-<span class="text-warning">szín</span></p>
-                                                <p class="fs-5 mt-0">A gomb háttere átlátszóva válik csak a körvonal lesz
+                                                <p class="fs-4 mb-0 fw-bold">btn-outline-<span
+                                                        class="text-warning">szín</span></p>
+                                                <p class="fs-5 mt-0">A gomb háttere átlátszóva válik csak a körvonal
+                                                    lesz
                                                     látható és a szöveg beszíneződik az adott színre.</p>
                                             </div>
                                         </div>
