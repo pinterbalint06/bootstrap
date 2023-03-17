@@ -1,8 +1,8 @@
 function everyResize() {
-  $("#onlinetelepites").css("height", $("#offlinetelepites").height());
+  $("#onlinetelepites").css("height", $("#offlinetelepites").height().toString() + "px");
   $(".logo").css("height", $("#telepitescim").css('font-size'));
-  $("#progressbarwidth").css("width", $("#wrapperforwidth").width());
-  $('#meretezheto').css("min-width", $('#meretezhetoparent').width() * 0.3);
+  $("#progressbarwidth").css("width", $("#wrapperforwidth").width().toString() + "px");
+  $('#meretezheto').css("min-width", ($('#meretezhetoparent').width() * 0.3).toString() + "px");
   var meretezhetoRatio = $('#meretezheto').width() / $('#meretezhetoparent').width();
   if (meretezhetoRatio > 0.5 && meretezhetoRatio <= 0.75) {
     $('#meretezheto').children().each(function () {
@@ -57,28 +57,6 @@ $(document).ready(function () {
     containment: "#meretezhetoparent",
     resize: function (event, ui) {
       $('#meretezheto').css("height", "auto");
-    }
-  });
-
-  // KIFINOMULT SZINEK BEKAPCSOLASA A SZINVALTOZTATO KERETNEL
-
-  $("#kifinomultszinek").on("change", function () {
-    if ($(this).is(":checked")) {
-      $('.change-color').each(function () {
-        var currColor = $(this).attr("class").split(" ")[1].split("-")[1];
-        $(this).text(currColor.charAt(0).toUpperCase() + currColor.slice(1) + " Subtle");
-        if (currColor == "warning" || currColor == "info" || currColor == "light") {
-          $(this).addClass("text-white");
-        }
-        $(this).addClass("bg-" + currColor + "-subtle");
-      });
-    } else {
-      $('.change-color').each(function () {
-        var currColor = $(this).attr("class").split(" ")[1].split("-")[1];
-        $(this).text(currColor.charAt(0).toUpperCase() + currColor.slice(1));
-        $(this).removeClass("bg-" + currColor + "-subtle");
-        $(this).removeClass("text-white");
-      });
     }
   });
 
@@ -208,16 +186,56 @@ $(document).ready(function () {
           $('.change-color').addClass($(this).attr("value"));
         }
       }
+    } else if ($(this).attr("name") == "gombokDisable") {
+      $('.change-color').toggleClass("disabled");
+    } else if ($(this).attr("name") == "gombokOutline") {
+      $('.change-color').each(function () {
+        var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-'))[0].split("-");
+        var currColor = currBaseColor[currBaseColor.length - 1];
+        if (currColor == "dark") {
+          $(this).toggleClass("text-white");
+        }
+        $(this).toggleClass("btn-" + currColor + " btn-outline-" + currColor);
+      });
+      if ($(this).is(":checked")) {
+        $("#kifinomultszinek").attr("disabled", true);
+      } else {
+        $("#kifinomultszinek").removeAttr("disabled");
+      }
+    } else if ($(this).attr("name") == "subtle") {
+      if ($(this).is(":checked")) {
+        $("#btnoutline").attr("disabled", true);
+        $('.change-color').each(function () {
+          var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-'))[0].split("-");
+          var currColor = currBaseColor[currBaseColor.length - 1];
+          $(this).text(currColor.charAt(0).toUpperCase() + currColor.slice(1) + " Subtle");
+          if (currColor == "warning" || currColor == "info" || currColor == "light") {
+            $(this).addClass("text-white");
+          }
+          $(this).addClass("bg-" + currColor + "-subtle");
+        });
+      } else {
+        $("#btnoutline").removeAttr("disabled");
+        $('.change-color').each(function () {
+          var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-'))[0].split("-");
+          var currColor = currBaseColor[currBaseColor.length - 1];
+          $(this).text(currColor.charAt(0).toUpperCase() + currColor.slice(1));
+          $(this).removeClass("bg-" + currColor + "-subtle");
+          $(this).removeClass("text-white");
+        });
+      }
     }
   });
 
   // SZINVALTOZTATO KERET GOMBJAI
 
   $('.change-color').on('click', function () {
+    var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-'))[0].split("-");
+    var currColor = currBaseColor[currBaseColor.length - 1];
     if ($("#kifinomultszinek").is(":checked")) {
-      var colorClass = $(this).attr('class').split(' ')[1].replace("btn-", "bg-") + "-subtle";
+      var colorClass = "bg-" + currColor + "-subtle";
     } else {
-      var colorClass = $(this).attr('class').split(' ')[1].replace("btn-", "bg-");
+      var colorClass = "bg-" + currColor;
     }
     $('#szinvalto').addClass('bg-transition').animate({}, 3000, function () {
       var classok = $('#szinvalto').attr('class').split(' ');

@@ -30,7 +30,12 @@ body {
     --bs-btn-hover-color: white;
 }
 
-#tableTeszt, #tableTeszt * {
+#kifinomultszinek {
+    transition: all 0.8s ease;
+}
+
+#tableTeszt,
+#tableTeszt * {
     transition: background-color 0.8s ease, width 0.8s ease, height 0.8s ease, padding 0.8s ease;
 }
 
