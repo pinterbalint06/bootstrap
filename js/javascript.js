@@ -190,7 +190,7 @@ $(document).ready(function () {
       $('.change-color').toggleClass("disabled");
     } else if ($(this).attr("name") == "gombokOutline") {
       $('.change-color').each(function () {
-        var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-'))[0].split("-");
+        var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-') && item !== 'btn-sm' && item !== 'btn-lg')[0].split("-");
         var currColor = currBaseColor[currBaseColor.length - 1];
         if (currColor == "dark") {
           $(this).toggleClass("text-white");
@@ -206,7 +206,7 @@ $(document).ready(function () {
       if ($(this).is(":checked")) {
         $("#btnoutline").attr("disabled", true);
         $('.change-color').each(function () {
-          var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-'))[0].split("-");
+          var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-') && item !== 'btn-sm' && item !== 'btn-lg')[0].split("-");
           var currColor = currBaseColor[currBaseColor.length - 1];
           $(this).text(currColor.charAt(0).toUpperCase() + currColor.slice(1) + " Subtle");
           if (currColor == "warning" || currColor == "info" || currColor == "light") {
@@ -217,7 +217,7 @@ $(document).ready(function () {
       } else {
         $("#btnoutline").removeAttr("disabled");
         $('.change-color').each(function () {
-          var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-'))[0].split("-");
+          var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-') && item !== 'btn-sm' && item !== 'btn-lg')[0].split("-");
           var currColor = currBaseColor[currBaseColor.length - 1];
           $(this).text(currColor.charAt(0).toUpperCase() + currColor.slice(1));
           $(this).removeClass("bg-" + currColor + "-subtle");
@@ -230,7 +230,7 @@ $(document).ready(function () {
   // SZINVALTOZTATO KERET GOMBJAI
 
   $('.change-color').on('click', function () {
-    var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-'))[0].split("-");
+    var currBaseColor = $(this).attr("class").split(" ").filter(item => item.startsWith('btn-') && item !== 'btn-sm' && item !== 'btn-lg')[0].split("-");
     var currColor = currBaseColor[currBaseColor.length - 1];
     if ($("#kifinomultszinek").is(":checked")) {
       var colorClass = "bg-" + currColor + "-subtle";
