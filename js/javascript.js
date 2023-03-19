@@ -2,22 +2,39 @@ function everyResize() {
   $("#onlinetelepites").css("height", $("#offlinetelepites").height().toString() + "px");
   $(".logo").css("height", $("#telepitescim").css('font-size'));
   $("#progressbarwidth").css("width", $("#wrapperforwidth").width().toString() + "px");
-  $('#meretezheto').css("min-width", ($('#meretezhetoparent').width() * 0.3).toString() + "px");
-  var meretezhetoRatio = $('#meretezheto').width() / $('#meretezhetoparent').width();
+  // MERETEZHETO ELSO
+  $('#meretezheto1').css("min-width", ($('#meretezhetoparent1').width() * 0.3).toString() + "px");
+  var meretezhetoRatio = $('#meretezheto1').width() / $('#meretezhetoparent1').width();
   if (meretezhetoRatio > 0.5 && meretezhetoRatio <= 0.75) {
-    $('#meretezheto').children().each(function () {
-      $('#meretezheto div:eq(0)').css("width", "50%");
-      $('#meretezheto div:eq(1)').css("width", "50%");
-      $('#meretezheto div:eq(2)').css("width", "100%");
+    $('#meretezheto1').children().each(function () {
+      $('#meretezheto1 div:eq(0)').css("width", "50%");
+      $('#meretezheto1 div:eq(1)').css("width", "50%");
+      $('#meretezheto1 div:eq(2)').css("width", "100%");
     });
   } else if (meretezhetoRatio <= 0.5) {
-    $('#meretezheto').children().each(function () {
-      $(this).css("width", "100%");
-    });
+    $('#meretezheto1').children().css("width", "100%");
   } else {
-    $('#meretezheto').children().each(function () {
-      $(this).css("width", (100 / 3).toString() + "%");
+    $('#meretezheto1').children().css("width", (100 / 3).toString() + "%");
+  }
+  // MERETEZHETO MASODIK
+  $('#meretezheto2').css("min-width", (($('#meretezhetoparent2').width() * 0.15) + 6).toString() + "px");
+  $('#meretezheto2').resizable({minWidth: ($('#meretezhetoparent2').width() * 0.15) + 6});
+  
+  $('.minimumMinimum').css("width", ($('#meretezhetoparent2').width() * 0.15).toString() + "px");
+  $('.minimum').css("width", ($('#meretezhetoparent2').width() * 0.17).toString() + "px");
+  var meretezhetoRatio2 = $('#meretezheto2').width() / $('#meretezhetoparent2').width();
+  if (meretezhetoRatio2 > 0.83 && meretezhetoRatio2 <= 1) {
+    $('#meretezheto2').children().each(function () {
+      $('#meretezheto2').children().css("width", (100/6).toString() + "%");
     });
+  } else if (meretezhetoRatio2 > 0.66 && meretezhetoRatio2 <= 0.83) {
+    $('#meretezheto2').children().css("width", "25%");
+  } else if (meretezhetoRatio2 > 0.49 && meretezhetoRatio2 <= 0.66) {
+    $('#meretezheto2').children().css("width", (100/3).toString() + "%");
+  } else if (meretezhetoRatio2 > 0.32 && meretezhetoRatio2 <= 0.49) {
+    $('#meretezheto2').children().css("width", "50%");
+  } else if (meretezhetoRatio2 <= 0.32) {
+    $('#meretezheto2').children().css("width", "100%");
   }
 }
 
@@ -69,13 +86,23 @@ $(document).ready(function () {
     }, 1200);
   });
 
-  $('#meretezheto').resizable({
+  $('#meretezheto1').resizable({
     handles: {
-      'e': '#meretezokar'
+      'e': '#meretezokar1'
     },
-    containment: "#meretezhetoparent",
+    containment: "#meretezhetoparent1",
     resize: function (event, ui) {
-      $('#meretezheto').css("height", "auto");
+      $('#meretezheto1').css("height", "auto");
+    }
+  });
+
+  $('#meretezheto2').resizable({
+    handles: {
+      'e': '#meretezokar2'
+    },
+    containment: "#meretezhetoparent2",
+    resize: function (event, ui) {
+      $('#meretezheto2').css("height", "auto");
     }
   });
 
@@ -348,13 +375,13 @@ $(document).ready(function () {
       $("#cols").empty();
       for (var i = 0; i < (12 / colok); i++) {
         var eredmeny = (100 / (12 / colok));
-        console.log(Number.isInteger(eredmeny));
         if (Number.isInteger(eredmeny)) {
           eredmeny = parseInt(eredmeny);
         } else {
           eredmeny = eredmeny.toFixed(2);
         }
-        $("<div class='col-" + colok + " fs-4 d-flex justify-content-center align-items-center bg-" + szinek[i % 6] + "'>" + eredmeny + "%</div>").appendTo($("#cols")).hide().slideDown(500);
+        $("#oszlopSzelesseg").text(eredmeny.toString() + "%");
+        $("<div class='col-" + colok + " bg-" + szinek[i % 6] + "'></div>").appendTo($("#cols")).hide().slideDown(500);
       }
     });
   });

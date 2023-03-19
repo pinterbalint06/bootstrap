@@ -252,15 +252,15 @@
                                 <p class="card-text fs-4 text-justify text-warning">A lenti példánál szimulálni tudod a
                                     reszponzivitást, a piros cella jobbra-balra húzásával!</p>
                                 <div class="row">
-                                    <div class="col-12 h-100" id="meretezhetoparent">
-                                        <div id="meretezheto" class="mh-100 row">
+                                    <div class="col-12 h-100" id="meretezhetoparent1">
+                                        <div id="meretezheto1" class="mh-100 row">
                                             <div class="bg-success">
                                                 <p class="m-1">col-sm-12 col-md-6 col-lg-4</p>
                                             </div>
                                             <div class="bg-warning">
                                                 <p class="m-1">col-sm-12 col-md-6 col-lg-4</p>
                                             </div>
-                                            <div id="meretezokar">
+                                            <div id="meretezokar1">
                                                 <p class="m-1">col-sm-12 col-md-12 col-lg-4</p>
                                             </div>
                                         </div>
@@ -272,8 +272,6 @@
                 </div>
             </div>
         </div>
-        <!-- TODO:
-            1. RESZPONZIVITAS RESZ ELKEZDESE-->
         <div class="row mb-3">
             <div class="col-12">
                 <div class="w-75 mx-auto d-flex justify-content-center flex-column overflow-hidden">
@@ -888,29 +886,33 @@
                     <button id="6" class="btn btn-dark m-2 change-col">Col-6</button>
                     <button id="12" class="btn btn-dark m-2 change-col">Col-12</button>
                 </div>
+                <p class="fs-5">Oszlop(ok) szélessége: <span id="oszlopSzelesseg" class="fw-bold">25%</span></p>
             </div>
             <div class="col-12">
                 <div id="cols" class="row mx-1">
-                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-danger">25%</div>
-                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-success">25%</div>
-                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-warning">25%</div>
-                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-primary">25%</div>
+                    <div class="col-3 bg-danger"></div>
+                    <div class="col-3 bg-success"></div>
+                    <div class="col-3 bg-warning"></div>
+                    <div class="col-3 bg-primary"></div>
                 </div>
             </div>
             <div class="col-12">
                 <h3 class="display-3 text-center mt-3">Progressive Ehancement</h3>
+            </div>
+            <div class="col-12 col-xxl-6">
                 <p class="fs-5 fw-bold">Kijelzőtől (felbontástól) függően másképpen jelenítjük meg a weboldal tartalmát.
                 </p>
+                <p class="fs-4 fw-bold">Bootstrap töréspontok:</p>
                 <div class="d-flex">
                     <div class="d-flex flex-row justify-content-between border-top border-dark border-5">
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-6 justify-content-center d-flex">
-                        <div class="idovonal">
+                        <div class="idovonal d-flex flex-column justify-content-evenly h-100">
                             <div class="kartya bg-dark">
                                 <div class="kartyabelso">
-                                    <h3 class="kartyacim"><stron>XXL</stron> ≥ 1400px</h3>
+                                    <h3 class="kartyacim"><strong>XXL</strong> ≥ 1400px</h3>
                                     <p class="fs-5 mb-0 pb-0">Extra extra nagy kijelző</p>
                                     <p class="fs-5 mb-0 pb-0">Nagy felbontású monitorok, TV-k</p>
                                     <img class="img-fluid w-50 d-block mx-auto" src="imgs/xxl.png" alt="XXL kijelző">
@@ -926,33 +928,77 @@
                             </div>
                             <div class="kartya bg-dark">
                                 <div class="kartyabelso">
-                                    <h3 class="kartyacim">1200px &gt; <strong>L</strong> ≥ 992px</h3>
+                                    <h3 class="kartyacim">1200px &gt; <strong>LG</strong> ≥ 992px</h3>
                                     <p class="fs-5 mb-0 pb-0">Nagy kijelző</p>
                                     <p class="fs-5 mb-0 pb-0">Átlagos monitorok, laptopok</p>
-                                    <img class="img-fluid w-50 d-block mx-auto" src="imgs/l.png" alt="L kijelző">
+                                    <img class="img-fluid w-50 d-block mx-auto" src="imgs/lg.png" alt="L kijelző">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 justify-content-center d-flex">
-                        <div class="idovonal">
+                        <div class="idovonal d-flex flex-column justify-content-evenly h-100">
                             <div class="kartya bg-dark">
                                 <div class="kartyabelso">
-                                    <h3 class="kartyacim">Szöveg</h3>
-                                    <p>Próba szöveg</p>
+                                    <h3 class="kartyacim"> 992px &gt; <strong>MD</strong> ≥ 768px</h3>
+                                    <p class="fs-5 mb-0 pb-0">Közepes kijelző</p>
+                                    <p class="fs-5 mb-0 pb-0">Nagyobb tabletek, laptopok</p>
+                                    <img class="img-fluid w-50 d-block mx-auto" src="imgs/md.png" alt="MD kijelző">
                                 </div>
                             </div>
                             <div class="kartya bg-dark">
                                 <div class="kartyabelso">
-                                    <h3 class="kartyacim">Szöveg</h3>
-                                    <p>Próba szöveg</p>
+                                    <h3 class="kartyacim"> 768px &gt; <strong>SM</strong> ≥ 576px</h3>
+                                    <p class="fs-5 mb-0 pb-0">Kis kijelző</p>
+                                    <p class="fs-5 mb-0 pb-0">Nagyobb telefonok, tabletek</p>
+                                    <img class="img-fluid w-50 d-block mx-auto" src="imgs/sm.png" alt="SM kijelző">
                                 </div>
                             </div>
                             <div class="kartya bg-dark">
                                 <div class="kartyabelso">
-                                    <h3 class="kartyacim">Szöveg</h3>
-                                    <p>Próba szöveg</p>
+                                    <h3 class="kartyacim"> 576px &gt; <strong>XS</strong></h3>
+                                    <p class="fs-5 mb-0 pb-0">Nagyon kicsi kijelző</p>
+                                    <p class="fs-5 mb-0 pb-0">Telefonok, okosórák</p>
+                                    <img class="img-fluid w-25 d-block mx-auto" src="imgs/xs.png" alt="XS kijelző">
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xxl-6">
+                <p class="fs-2 fw-bold">Reszponzivitás szimulátor:</p>
+                <p class="fs-5">A világos kék (bg-info) cella jobbra-balra húzásával szimulálhatod a kiírt rácsrendszer töréspontjait!</p>
+                <p class="fs-5">A csíkon lévő színek mutatják a töréspontokat a megadott rácsrendszerben lévő színek szerint.</p>
+                <div class="d-flex justify-content-center">
+                    <div class="w-auto">
+                        <p class="bg-dark p-3 m-3 rounded-3 d-inline-block text-center"><span class="text-primary">col-12</span> <span
+                                class="text-danger">col-sm-6</span> <span class="text-success">col-md-4</span> <span class="text-warning">col-lg-3</span>
+                                <span class="text-info">col-xl-2</span></p>
+                    </div>
+                </div>
+                <div class="row w-100">
+                    <div class="col-12 w-100 d-flex p-0">
+                        <hr class="minimumMinimum bg-secondary">
+                        <hr class="minimum bg-primary">
+                        <hr class="minimum bg-danger">
+                        <hr class="minimum bg-success">
+                        <hr class="minimum bg-warning">
+                        <hr class="minimum bg-info">
+                    </div>
+                    <div class="col-12 w-100 h-100 p-0" id="meretezhetoparent2">
+                        <div id="meretezheto2" class="mh-100 row m-0">
+                            <div class="bg-danger">
+                            </div>
+                            <div class="bg-success">
+                            </div>
+                            <div class="bg-warning">
+                            </div>
+                            <div class="bg-primary">
+                            </div>
+                            <div class="bg-dark">
+                            </div>
+                            <div id="meretezokar2" class="bg-info">
                             </div>
                         </div>
                     </div>
@@ -969,3 +1015,6 @@
 </body>
 
 </html>
+
+<!-- TODO:
+            1. MEDIA LEKERDEZES-->

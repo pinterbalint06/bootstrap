@@ -6,6 +6,11 @@
     font-size: clamp(50px, 8vw, 99999px);
 }
 
+
+.fs-7 {
+    font-size: clamp(10px, 1rem, 99999px);
+}
+
 .focimcol {
     height: 100vh;
 }
@@ -94,6 +99,7 @@ body {
     font-size: 0.8rem !important;
 }
 
+
 .minw50 {
     min-width: 50%;
 }
@@ -118,14 +124,30 @@ body {
     text-align: justify;
 }
 
-#meretezheto {
+#meretezheto1, #meretezheto2 {
     max-width: 100%;
     border: 3px solid blue;
 }
 
-#meretezokar {
+#meretezheto2 * {
+    min-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+#meretezokar1 {
     cursor: col-resize;
     background-color: red;
+}
+
+#meretezokar2 {
+    cursor: col-resize;
+}
+
+.minimum, .minimumMinimum {
+    height: 10px;
+    opacity: 1;
+    border: none;
 }
 
 #progressbaranimation {
@@ -293,10 +315,12 @@ mark {
 
 .kartya {
     position: relative;
-    margin: 0 0 20px 20px;
+    margin: 0 0 1rem 20px;
     padding: 10px;
     border-radius: 8px;
     max-width: 400px;
+    flex: 1;
+    height: 33%;
 }
 
 .kartyabelso {
