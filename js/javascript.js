@@ -25,11 +25,24 @@ $(document).ready(function () {
   var ikonokMutatva = 0;
   var alertAlapContent = "";
   var stringToAdd = "";
+  var ikonokKodHelye = {
+    "infoIBetu": 0,
+    "pipa": 1,
+    "felkialtoJel": 2
+  };
   everyResize();
   window.onresize = function () {
     everyResize();
   }
   Prism.highlightAll();
+  $("#ikonKodokIde").children().each(function () {
+    if ($(this).hasClass("punctuation")) {
+      $(this).remove();
+    }
+  });
+  $("#ikonKodokIde").children().each(function () {
+    $(this).addClass("d-none");
+  });
   $('#changea').find('a').attr("target", "_blank");
 
 
@@ -240,22 +253,31 @@ $(document).ready(function () {
       $("[elozoszinalert]").removeAttr("elozoszinalert",);
       $(this).attr("elozoszinalert", $(this).attr("value"));
     } else if ($(this).attr("name") == "alertIkonok") { // UZENETES RESZ ITT KEZDODIK
+      // PUNCTUATION KIVETELE
+      $("#ikonKodokIde").children().each(function () {
+        if ($(this).hasClass("punctuation")) {
+          $(this).remove();
+        }
+      });
+      // FO RESZ
       if (ikonokMutatva > 0) {
         if ($(this).is(":checked")) {
-          stringToAdd = '<svg class="bi flex-shrink-0 me-2 text-' + $("[elozoszinalert]").attr("elozoszinalert") + '" role="img" id="' + $(this).attr("value") + 'IkonId">\n    <use xlink:href="#' + $(this).attr("value") + '"/>\n</svg>';
-          $("#ikonKodokIde").text(stringToAdd);
-          Prism.highlightElement(document.getElementById("ikonKodokIde"));
-          $("#ikonokIde").append(stringToAdd.replace("\n    ", "").replace("\n", ""));
+          // LATHATLAN KIVETELE
+          for (var i = 0; i < 3; i++) {
+            $("#ikonKodokIde").children().eq(((ikonokKodHelye[$(this).attr("value")]) * 3) + i).removeClass("d-none");
+          }
+          $("#ikonokIde").append('<svg class="bi flex-shrink-0 me-2 text-' + $("[elozoszinalert]").attr("elozoszinalert") + '" role="img" id="' + $(this).attr("value") + 'IkonId"><use xlink:href="#' + $(this).attr("value") + '"/></svg>');
           ikonokMutatva = ikonokMutatva + 1;
         } else {
+          for (var i = 0; i < 3; i++) {
+            $("#ikonKodokIde").children().eq(((ikonokKodHelye[$(this).attr("value")]) * 3) + i).addClass("d-none");
+          }
           $("#" + $(this).attr("value") + "IkonId").remove();
-          $("#kodIde").children().each(function () {
-            $(this).remove();
-          });;
           ikonokMutatva = ikonokMutatva - 1;
           if (ikonokMutatva == 0) {
             $("#alertTeszt").removeClass("d-flex align-items-center");
             $("#alertTeszt").html(alertAlapContent);
+            $("#ikonKodokIdePre").addClass("d-none");
           }
         }
       } else {
@@ -263,11 +285,12 @@ $(document).ready(function () {
           $("#alertTeszt").addClass("d-flex align-items-center");
           alertAlapContent = $("#alertTeszt").html();
           $("#alertTeszt").html("<div id='ikonokIde'></div><div>" + alertAlapContent + "</div>");
-          $("#kodIde").append('<pre class="language-html rounded-2 p-3 mw-100" tabindex="0"><code class="language-html fs-8" id="ikonKodokIde"></code></pre>');
-          stringToAdd = ('<svg class="bi flex-shrink-0 me-2 text-' + $("[elozoszinalert]").attr("elozoszinalert") + '" role="img" id="' + $(this).attr("value") + 'IkonId">\n    <use xlink:href="#' + $(this).attr("value") + '"/>\n</svg>');
-          $("#ikonKodokIde").text(stringToAdd);
-          Prism.highlightElement(document.getElementById("ikonKodokIde"));
-          $("#ikonokIde").append(stringToAdd.replace("\n    ", "").replace("\n", ""));
+          $("#ikonKodokIdePre").removeClass("d-none");
+          // LATHATLAN KIVETELE
+          for (var i = 0; i < 3; i++) {
+            $("#ikonKodokIde").children().eq(((ikonokKodHelye[$(this).attr("value")]) * 3) + i).removeClass("d-none");
+          }
+          $("#ikonokIde").append('<svg class="bi flex-shrink-0 me-2 text-' + $("[elozoszinalert]").attr("elozoszinalert") + '" role="img" id="' + $(this).attr("value") + 'IkonId"><use xlink:href="#' + $(this).attr("value") + '"/></svg>');
           ikonokMutatva = ikonokMutatva + 1;
         }
       }
