@@ -129,7 +129,7 @@ body {
     border: 3px solid blue;
 }
 
-#meretezheto2 * {
+#meretezheto1 *, #meretezheto2 * {
     min-height: 25px;
     margin: 0;
     padding: 0;
@@ -144,7 +144,7 @@ body {
     cursor: col-resize;
 }
 
-.minimum, .minimumMinimum {
+.minimum1, .minimumMinimum1, .minimum2, .minimumMinimum2 {
     height: 10px;
     opacity: 1;
     border: none;

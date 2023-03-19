@@ -251,17 +251,40 @@
                                 </p>
                                 <p class="card-text fs-4 text-justify text-warning">A lenti példánál szimulálni tudod a
                                     reszponzivitást, a piros cella jobbra-balra húzásával!</p>
+
+                                <p class="fs-4 fw-bold">A szürke rész a minimum, annál kisebb nem tud lenni.</p>
+                                <div class="d-flex justify-content-evenly">
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <p>Első kettő cella:</p>
+                                        <p class="bg-dark-subtle p-2 m-0 rounded-2 d-inline-block text-center"><span
+                                                class="text-success">col-12</span> <span
+                                                class="text-warning">col-md-6</span> <span
+                                                class="text-danger">col-lg-4</span>
+                                        </p>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                        <p>Utolsó cella:</p>
+                                        <p class="bg-dark-subtle p-2 m-0 rounded-2 d-inline-block text-center"><span
+                                                class="text-success">col-12</span> <span
+                                                class="text-warning">col-md-12</span> <span
+                                                class="text-danger">col-lg-4</span>
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="row">
+                                    <div class="col-12 w-100 d-flex p-0">
+                                        <hr class="minimumMinimum1 bg-secondary">
+                                        <hr class="minimum1 minimum11 bg-success">
+                                        <hr class="minimum1 minimum12 bg-warning">
+                                        <hr class="minimum1 minimum13 bg-danger">
+                                    </div>
                                     <div class="col-12 h-100" id="meretezhetoparent1">
                                         <div id="meretezheto1" class="mh-100 row">
                                             <div class="bg-success">
-                                                <p class="m-1">col-sm-12 col-md-6 col-lg-4</p>
                                             </div>
                                             <div class="bg-warning">
-                                                <p class="m-1">col-sm-12 col-md-6 col-lg-4</p>
                                             </div>
                                             <div id="meretezokar1">
-                                                <p class="m-1">col-sm-12 col-md-12 col-lg-4</p>
                                             </div>
                                         </div>
                                     </div>
@@ -302,7 +325,7 @@
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="tableSzinek"
-                                            id="tableAlap" value="alap" checked elozoszin="alap">
+                                            id="tableAlap" value="alap" checked data-elozoszin="alap">
                                         <label class="form-check-label" for="tableAlap">Alap</label>
                                     </div>
                                     <div class="form-check form-check-inline">
@@ -384,7 +407,7 @@
                                         <input class="form-check-input demo-buttons" type="radio"
                                             name="tableSzegelyezes" id="szegelyekAlap" value="alapSzegely" checked>
                                         <label class="form-check-label" for="szegelyekAlap"
-                                            elozoszegely="alap">Alap</label>
+                                            data-elozoszegely="alap">Alap</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio"
@@ -491,18 +514,18 @@
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="kepekMeret"
-                                            id="w50" value="w-50" kepekegyszerudisable checked>
+                                            id="w50" value="w-50" data-kepekegyszerudisable checked>
                                         <label class="form-check-label" for="w50">w-50</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="kepekMeret"
-                                            id="imgfluid" value="img-fluid" kepekegyszerudisable>
+                                            id="imgfluid" value="img-fluid" data-kepekegyszerudisable>
                                         <label class="form-check-label" for="imgfluid">img-fluid</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox"
                                             name="kepekPosition" id="kozepre" value="d-block mx-auto"
-                                            kepekegyszerudisable>
+                                            data-kepekegyszerudisable>
                                         <label class="form-check-label" for="imgfluid">d-block mx-auto</label>
                                     </div>
                                 </div>
@@ -526,22 +549,22 @@
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="kepekKerekites"
-                                            id="alapKerekites" value="alapKerekites" kepekegyszerudisable checked>
+                                            id="alapKerekites" value="alapKerekites" data-kepekegyszerudisable checked>
                                         <label class="form-check-label" for="alapKerekites">Alap</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="kepekKerekites"
-                                            id="rounded" value="rounded" kepekegyszerudisable>
+                                            id="rounded" value="rounded" data-kepekegyszerudisable>
                                         <label class="form-check-label" for="rounded">rounded</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="kepekKerekites"
-                                            id="roundedCircle" value="rounded-circle" kepekegyszerudisable>
+                                            id="roundedCircle" value="rounded-circle" data-kepekegyszerudisable>
                                         <label class="form-check-label" for="roundedCircle">rounded-circle</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox" name="kepekSzegely"
-                                            id="imgthumbnail" value="img-thumbnail" kepekegyszerudisable>
+                                            id="imgthumbnail" value="img-thumbnail" data-kepekegyszerudisable>
                                         <label class="form-check-label" for="imgthumbnail">img-thumbnail</label>
                                     </div>
                                 </div>
@@ -570,39 +593,39 @@
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertPrimary" value="primary" checked elozoszinalert="primary"
-                                            alertegyszerudisable>
+                                            id="alertPrimary" value="primary" checked data-elozoszinalert="primary"
+                                            data-alertegyszerudisable>
                                         <label class="form-check-label text-primary" for="alertPrimary">Primary</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertSecondary" value="secondary" alertegyszerudisable>
+                                            id="alertSecondary" value="secondary" data-alertegyszerudisable>
                                         <label class="form-check-label text-secondary"
                                             for="alertSecondary">Secondary</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertSuccess" value="success" alertegyszerudisable>
+                                            id="alertSuccess" value="success" data-alertegyszerudisable>
                                         <label class="form-check-label text-success" for="alertSuccess">Success</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertDanger" value="danger" alertegyszerudisable>
+                                            id="alertDanger" value="danger" data-alertegyszerudisable>
                                         <label class="form-check-label text-danger" for="alertDanger">Danger</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertWarning" value="warning" alertegyszerudisable>
+                                            id="alertWarning" value="warning" data-alertegyszerudisable>
                                         <label class="form-check-label text-warning" for="alertWarning">Warning</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertInfo" value="info" alertegyszerudisable>
+                                            id="alertInfo" value="info" data-alertegyszerudisable>
                                         <label class="form-check-label text-info" for="alertInfo">Info</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertDark" value="dark" alertegyszerudisable>
+                                            id="alertDark" value="dark" data-alertegyszerudisable>
                                         <label class="form-check-label text-dark feherkorvonal"
                                             for="alertDark">Dark</label>
                                     </div>
@@ -625,7 +648,7 @@
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
-                                            id="iBetuIkonCheck" value="infoIBetu" alertegyszerudisable>
+                                            id="iBetuIkonCheck" value="infoIBetu" data-alertegyszerudisable>
                                         <label class="form-check-label text-light" for="iBetuIkonCheck"><svg
                                                 class="bi flex-shrink-0 me-2" role="img">
                                                 <use xlink:href="#infoIBetu" />
@@ -633,7 +656,7 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
-                                            id="pipaIkonCheck" value="pipa" alertegyszerudisable>
+                                            id="pipaIkonCheck" value="pipa" data-alertegyszerudisable>
                                         <label class="form-check-label text-light" for="pipaIkonCheck"><svg
                                                 class="bi flex-shrink-0 me-2" role="img">
                                                 <use xlink:href="#pipa" />
@@ -641,7 +664,7 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
-                                            id="felkialtoJelIkonCheck" value="felkialtoJel" alertegyszerudisable>
+                                            id="felkialtoJelIkonCheck" value="felkialtoJel" data-alertegyszerudisable>
                                         <label class="form-check-label text-light" for="felkialtoJelIkonCheck"><svg
                                                 class="bi flex-shrink-0 me-2" role="img">
                                                 <use xlink:href="#felkialtoJel" />
@@ -707,13 +730,13 @@
                             <div class="d-flex flex-row flex-wrap mb-3">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input demo-buttons" type="checkbox" name="alertBezaras"
-                                        id="AlertBezaras" value="alert-dismissible" alertegyszerudisable>
+                                        id="AlertBezaras" value="alert-dismissible" data-alertegyszerudisable>
                                     <label class="form-check-label" for="AlertBezaras">'alert-dismissible' és a
                                         Gomb</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input demo-buttons" type="checkbox" name="alertBezaras"
-                                        id="idAnimalas" value="fade show" alertegyszerudisable>
+                                        id="idAnimalas" value="fade show" data-alertegyszerudisable>
                                     <label class="form-check-label" for="idAnimalas">Animációk</label>
                                 </div>
                             </div>
@@ -744,7 +767,7 @@
                                 <div class="d-flex flex-row flex-wrap justify-content-center">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox" name="subtle"
-                                            id="kifinomultszinek" value="subtle" kepekegyszerudisable>
+                                            id="kifinomultszinek" value="subtle" data-kepekegyszerudisable>
                                         <label class="form-check-label" for="kifinomultszinek">Subtle színek</label>
                                     </div>
                                 </div>
@@ -764,8 +787,8 @@
                                         <p class="fs-2 mb-1 fw-bold text-center">Gombhoz link rendelés:</p>
                                         <pre class="language-html rounded-2 p-3 mw-100" tabindex="0">
                                             <code class="language-html">
-                                                &lt;button type="button" class="btn btn-link border border-light" <mark>onclick="location='https://getbootstrap.com/'"</mark>&gt;Ezen a lapon&lt;/button&gt
-                                                &lt;button type="button" class="btn btn-link border border-light" <mark>onclick="window.open('https://getbootstrap.com/')'"</mark>&gt;Új lapon&lt;/button&gt
+                                                &lt;button type="button" class="btn btn-link border border-light" <mark>onclick="location='https://getbootstrap.com/'"</mark>&gt;Ezen a lapon&lt;/button&gt;
+                                                &lt;button type="button" class="btn btn-link border border-light" <mark>onclick="window.open('https://getbootstrap.com/')'"</mark>&gt;Új lapon&lt;/button&gt;
                                         </code>
                                     </pre>
                                         <button type="button" class="btn btn-link border border-light"
@@ -790,17 +813,17 @@
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input demo-buttons" type="radio"
                                                     name="gombokMeret" id="alapGombMeret" value="alapGombMeret"
-                                                    kepekegyszerudisable checked>
+                                                    data-kepekegyszerudisable checked>
                                                 <label class="form-check-label" for="alapGombMeret">Alap</label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input demo-buttons" type="radio"
-                                                    name="gombokMeret" id="btnlg" value="btn-lg" kepekegyszerudisable>
+                                                    name="gombokMeret" id="btnlg" value="btn-lg" data-kepekegyszerudisable>
                                                 <label class="form-check-label" for="btnlg">btn-lg</label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input demo-buttons" type="radio"
-                                                    name="gombokMeret" id="btnsm" value="btn-sm" kepekegyszerudisable>
+                                                    name="gombokMeret" id="btnsm" value="btn-sm" data-kepekegyszerudisable>
                                                 <label class="form-check-label" for="btnsm">btn-sm</label>
                                             </div>
                                         </div>
@@ -826,13 +849,13 @@
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input demo-buttons" type="checkbox"
                                                     name="gombokDisable" id="disabled" value="disabled"
-                                                    kepekegyszerudisable>
+                                                    data-kepekegyszerudisable>
                                                 <label class="form-check-label" for="disabled">Disabled</label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input demo-buttons" type="checkbox"
                                                     name="gombokOutline" id="btnoutline" value="btn-outline"
-                                                    kepekegyszerudisable>
+                                                    data-kepekegyszerudisable>
                                                 <label class="form-check-label" for="btnoutline">btn-outline-<span
                                                         class="text-warning">szín</span></label>
                                             </div>
@@ -968,23 +991,28 @@
             </div>
             <div class="col-12 col-xxl-6">
                 <p class="fs-2 fw-bold">Reszponzivitás szimulátor:</p>
-                <p class="fs-5">A világos kék (bg-info) cella jobbra-balra húzásával szimulálhatod a kiírt rácsrendszer töréspontjait!</p>
-                <p class="fs-5">A csíkon lévő színek mutatják a töréspontokat a megadott rácsrendszerben lévő színek szerint.</p>
+                <p class="fs-5">A világos kék (bg-info) cella jobbra-balra húzásával szimulálhatod a kiírt rácsrendszer
+                    töréspontjait!</p>
+                <p class="fs-5">A csíkon lévő színek mutatják a töréspontokat a megadott rácsrendszerben lévő színek
+                    szerint.</p>
+                <p class="fs-5">A szürke rész a minimum, annál kisebb nem tud lenni.</p>
                 <div class="d-flex justify-content-center">
                     <div class="w-auto">
-                        <p class="bg-dark p-3 m-3 rounded-3 d-inline-block text-center"><span class="text-primary">col-12</span> <span
-                                class="text-danger">col-sm-6</span> <span class="text-success">col-md-4</span> <span class="text-warning">col-lg-3</span>
-                                <span class="text-info">col-xl-2</span></p>
+                        <p class="bg-dark p-3 m-3 rounded-3 d-inline-block text-center"><span
+                                class="text-primary">col-12</span> <span class="text-danger">col-sm-6</span> <span
+                                class="text-success">col-md-4</span> <span class="text-warning">col-lg-3</span>
+                            <span class="text-info">col-xl-2</span>
+                        </p>
                     </div>
                 </div>
                 <div class="row w-100">
                     <div class="col-12 w-100 d-flex p-0">
-                        <hr class="minimumMinimum bg-secondary">
-                        <hr class="minimum bg-primary">
-                        <hr class="minimum bg-danger">
-                        <hr class="minimum bg-success">
-                        <hr class="minimum bg-warning">
-                        <hr class="minimum bg-info">
+                        <hr class="minimumMinimum2 bg-secondary">
+                        <hr class="minimum2 bg-primary">
+                        <hr class="minimum2 bg-danger">
+                        <hr class="minimum2 bg-success">
+                        <hr class="minimum2 bg-warning">
+                        <hr class="minimum2 bg-info">
                     </div>
                     <div class="col-12 w-100 h-100 p-0" id="meretezhetoparent2">
                         <div id="meretezheto2" class="mh-100 row m-0">
