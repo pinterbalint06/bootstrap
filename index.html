@@ -128,7 +128,7 @@
                     <div class="col">
                         <div class="card w-100 h-100 pb-3">
                             <div class="card-body d-flex flex-column">
-                                <h2 class="card-title">Egyedi megjelenítés</h2>
+                                <a class="card-title fs-2" href="#egyedi">Egyedi megjelenítés</a>
                                 <p class="card-text fs-4">Egyedi megjelenítésű bootstrappes:</p>
                                 <ul class="list-group list-group-horizontal-lg w-100 mx-auto">
                                     <li class="list-group-item mw-100 minw50">Karakterek</li>
@@ -277,8 +277,9 @@
         <div class="row mb-3">
             <div class="col-12">
                 <div class="w-75 mx-auto d-flex justify-content-center flex-column overflow-hidden">
-                    <h1 class="d-block text-center display-1 mx-3 mb-1">Főbb egyedi megjelenítésű elemek</h1>
-                    <h6 class="d-block text-center display-6 mx-3 mb-3">A legtöbb böngészőben az F12 megnyomásával meg
+                    <h1 class="d-block text-center display-1 mx-3 mb-1" id="egyedi">Főbb egyedi megjelenítésű elemek
+                    </h1>
+                    <h6 class="d-block text-center display-6 mx-3 mb-3">A legtöbb böngészőben az 'F12' megnyomásával meg
                         tudud nézni a beállított elem osztályait!</h6>
                     <div class="btn-group mb-3 mx-auto flex-wrap" role="group">
                         <button class="btn btn-primary contentchange p-2 tablak">Táblák</button>
@@ -693,8 +694,11 @@
                                     class="text-warning">alert-dismissible</span> osztállyal.</p>
                             <p class="fs-5 mb-2">A <span class="text-warning">fade</span> és <span
                                     class="text-warning">show</span> osztályokkal animálhatod az üzenet bezárását.</p>
-                            <p class="fs-5 mb-2 border border-danger border-2 text-warning p-1">Az üzenet alap esetben végleg eltűnik az oldalról, amikor bezárod!<br>De ebben a példában a gomb megnyomásával vissza tudod hozni!</p>
-                            <button class="btn btn-primary p-2 my-3 disabled" id="alertVisszahozas">Üzenet visszahozása</button>
+                            <p class="fs-5 mb-2 border border-danger border-2 text-warning p-1">Az üzenet alap esetben
+                                végleg eltűnik az oldalról, amikor bezárod!<br>De ebben a példában a gomb megnyomásával
+                                vissza tudod hozni!</p>
+                            <button class="btn btn-primary p-2 my-3 disabled" id="alertVisszahozas">Üzenet
+                                visszahozása</button>
                             <p class="fs-5 mb-2">Az 'X' gomb kódja:</p>
                             <pre class="language-html rounded-2 p-3 mw-100" tabindex="0">
                                 <code class="language-html fs-8">
@@ -860,29 +864,28 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row ujhatterszin pb-5">
+            <div class="col-12 gradient">
+            </div>
             <div class="col-12">
-                <div class="row mb-4">
-                    <div class="col-3">
-                        <button id="btn-col-3" class="btn btn-dark w-100">Col-3</button>
-                    </div>
-                    <div class="col-3">
-                        <button id="btn-col-4" class="btn btn-dark w-100">Col-4</button>
-                    </div>
-                    <div class="col-3">
-                        <button id="btn-col-6" class="btn btn-dark w-100">Col-6</button>
-                    </div>
-                    <div class="col-3">
-                        <button id="btn-col-12" class="btn btn-dark w-100">Col-12</button>
-                    </div>
+                <h1 class="display-1 text-center m-5" id="masodikfocim">Reszponzívitás</h1>
+            </div>
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center w-100">
+                    <button id="1" class="btn btn-dark m-2 change-col">Col-1</button>
+                    <button id="2" class="btn btn-dark m-2 change-col">Col-2</button>
+                    <button id="3" class="btn btn-dark m-2 change-col">Col-3</button>
+                    <button id="4" class="btn btn-dark m-2 change-col">Col-4</button>
+                    <button id="6" class="btn btn-dark m-2 change-col">Col-6</button>
+                    <button id="12" class="btn btn-dark m-2 change-col">Col-12</button>
                 </div>
             </div>
             <div class="col-12">
-                <div id="cols" class="row">
-                    <div class="col-3 bg-danger"></div>
-                    <div class="col-3 bg-success"></div>
-                    <div class="col-3 bg-warning"></div>
-                    <div class="col-3 bg-primary"></div>
+                <div id="cols" class="row mx-3">
+                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-danger">1.</div>
+                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-success">2.</div>
+                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-warning">3.</div>
+                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-primary">4.</div>
                 </div>
             </div>
         </div>

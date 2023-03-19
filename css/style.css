@@ -2,6 +2,10 @@
     font-size: clamp(50px, 10vw, 99999px);
 }
 
+#masodikfocim {
+    font-size: clamp(50px, 5vw, 99999px);
+}
+
 .focimcol {
     height: 100vh;
 }
@@ -15,8 +19,20 @@
 
 body {
     overflow-x: hidden;
-    padding-bottom: 200px;
     background-color: #553C7B;
+}
+
+.ujhatterszin {
+    background-color: rgba(0, 55, 96, 1);
+}
+
+.gradient {
+    height: 10vh;
+    background: rgb(85,60,123);
+    background: -moz-linear-gradient(180deg, rgba(85,60,123,1) 32%, rgba(0,55,96,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(85,60,123,1) 32%, rgba(0,55,96,1) 100%);
+    background: linear-gradient(180deg, rgba(85,60,123,1) 32%, rgba(0,55,96,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#553c7b",endColorstr="#003760",GradientType=1);
 }
 
 #szinvalto {
@@ -30,7 +46,13 @@ body {
     --bs-btn-hover-color: white;
 }
 
-#kifinomultszinek, #alertTeszt, #alertTeszt a {
+.change-col {
+    flex: 1;
+}
+
+#kifinomultszinek,
+#alertTeszt,
+#alertTeszt a {
     transition: all 0.8s ease;
 }
 
@@ -69,7 +91,7 @@ body {
 }
 
 .fs-8 {
-    font-size: 0.8rem!important;
+    font-size: 0.8rem !important;
 }
 
 .minw50 {

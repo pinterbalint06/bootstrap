@@ -31,6 +31,7 @@ $(document).ready(function () {
     "pipa": 1,
     "felkialtoJel": 2
   };
+  var szinek = ["danger", "success", "warning", "primary", "dark", "info"];
   everyResize();
   window.onresize = function () {
     everyResize();
@@ -342,37 +343,13 @@ $(document).ready(function () {
 
   // COLOK MUTATÁSA
 
-  $("#btn-col-3").click(function () {
+  $(".change-col").click(function () {
+    var colok = parseInt($(this).attr("id"));
     $("#cols").children().slideUp(500, function () {
       $("#cols").empty();
-      $("<div class='col-3 bg-danger'></div>").appendTo($("#cols")).hide().slideDown(500);
-      $("<div class='col-3 bg-success'></div>").appendTo($("#cols")).hide().slideDown(500);
-      $("<div class='col-3 bg-warning'></div>").appendTo($("#cols")).hide().slideDown(500);
-      $("<div class='col-3 bg-primary'></div>").appendTo($("#cols")).hide().slideDown(500);
-    });
-  });
-
-  $("#btn-col-4").click(function () {
-    $("#cols").children().slideUp(500, function () {
-      $("#cols").empty();
-      $("<div class='col-4 bg-danger'></div>").appendTo($("#cols")).hide().slideDown(500);
-      $("<div class='col-4 bg-success'></div>").appendTo($("#cols")).hide().slideDown(500);
-      $("<div class='col-4 bg-warning'></div>").appendTo($("#cols")).hide().slideDown(500);
-    });
-  });
-
-  $("#btn-col-6").click(function () {
-    $("#cols").children().slideUp(500, function () {
-      $("#cols").empty();
-      $("<div class='col-6 bg-danger'></div>").appendTo($("#cols")).hide().slideDown(500);
-      $("<div class='col-6 bg-success'></div>").appendTo($("#cols")).hide().slideDown(500);
-    });
-  });
-
-  $("#btn-col-12").click(function () {
-    $("#cols").children().slideUp(500, function () {
-      $("#cols").empty();
-      $("<div class='col-12 bg-danger'></div>").appendTo($("#cols")).hide().slideDown(500);
+      for (var i = 0; i < 12/colok; i++) {
+        $("<div class='col-" + colok +" fs-4 d-flex justify-content-center align-items-center bg-" + szinek[i%6] + "'>" + (i+1) + ".</div>").appendTo($("#cols")).hide().slideDown(500);
+      }
     });
   });
 });
