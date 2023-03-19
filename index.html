@@ -273,15 +273,14 @@
             </div>
         </div>
         <!-- TODO:
-            1. Egyedi megjelenítésű lista elemeinek bemutatása
-            2. Egyedi megjelenítésű üzenetek befejezése-->
+            1. RESZPONZIVITAS RESZ ELKEZDESE-->
         <div class="row mb-3">
             <div class="col-12">
                 <div class="w-75 mx-auto d-flex justify-content-center flex-column overflow-hidden">
                     <h1 class="d-block text-center display-1 mx-3 mb-1">Főbb egyedi megjelenítésű elemek</h1>
                     <h6 class="d-block text-center display-6 mx-3 mb-3">A legtöbb böngészőben az F12 megnyomásával meg
                         tudud nézni a beállított elem osztályait!</h6>
-                    <div class="btn-group mb-3 mx-auto">
+                    <div class="btn-group mb-3 mx-auto flex-wrap" role="group">
                         <button class="btn btn-primary contentchange p-2 tablak">Táblák</button>
                         <button class="btn btn-primary contentchange p-2 kepek">Képek</button>
                         <button class="btn btn-primary contentchange p-2 uzenetek">Üzenetek</button>
@@ -571,38 +570,39 @@
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertPrimary" value="primary" checked elozoszinalert="primary">
+                                            id="alertPrimary" value="primary" checked elozoszinalert="primary"
+                                            alertegyszerudisable>
                                         <label class="form-check-label text-primary" for="alertPrimary">Primary</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertSecondary" value="secondary">
+                                            id="alertSecondary" value="secondary" alertegyszerudisable>
                                         <label class="form-check-label text-secondary"
                                             for="alertSecondary">Secondary</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertSuccess" value="success">
+                                            id="alertSuccess" value="success" alertegyszerudisable>
                                         <label class="form-check-label text-success" for="alertSuccess">Success</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertDanger" value="danger">
+                                            id="alertDanger" value="danger" alertegyszerudisable>
                                         <label class="form-check-label text-danger" for="alertDanger">Danger</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertWarning" value="warning">
+                                            id="alertWarning" value="warning" alertegyszerudisable>
                                         <label class="form-check-label text-warning" for="alertWarning">Warning</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertInfo" value="info">
+                                            id="alertInfo" value="info" alertegyszerudisable>
                                         <label class="form-check-label text-info" for="alertInfo">Info</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="radio" name="alertSzinek"
-                                            id="alertDark" value="dark">
+                                            id="alertDark" value="dark" alertegyszerudisable>
                                         <label class="form-check-label text-dark feherkorvonal"
                                             for="alertDark">Dark</label>
                                     </div>
@@ -625,7 +625,7 @@
                                 <div class="d-flex flex-row flex-wrap">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
-                                            id="iBetuIkonCheck" value="infoIBetu">
+                                            id="iBetuIkonCheck" value="infoIBetu" alertegyszerudisable>
                                         <label class="form-check-label text-light" for="iBetuIkonCheck"><svg
                                                 class="bi flex-shrink-0 me-2" role="img">
                                                 <use xlink:href="#infoIBetu" />
@@ -633,7 +633,7 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
-                                            id="pipaIkonCheck" value="pipa">
+                                            id="pipaIkonCheck" value="pipa" alertegyszerudisable>
                                         <label class="form-check-label text-light" for="pipaIkonCheck"><svg
                                                 class="bi flex-shrink-0 me-2" role="img">
                                                 <use xlink:href="#pipa" />
@@ -641,7 +641,7 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input demo-buttons" type="checkbox" name="alertIkonok"
-                                            id="felkialtoJelIkonCheck" value="felkialtoJel">
+                                            id="felkialtoJelIkonCheck" value="felkialtoJel" alertegyszerudisable>
                                         <label class="form-check-label text-light" for="felkialtoJelIkonCheck"><svg
                                                 class="bi flex-shrink-0 me-2" role="img">
                                                 <use xlink:href="#felkialtoJel" />
@@ -685,6 +685,34 @@
                                         &lt;/svg&gt;
                                 </code>
                             </pre>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-center flex-column">
+                            <p class="fs-2 mb-0 fw-bold">Bezárható üzenetek:</p>
+                            <p class="fs-5 mb-2">Az üzenetet bezárhatóvá teheted a <span
+                                    class="text-warning">alert-dismissible</span> osztállyal.</p>
+                            <p class="fs-5 mb-2">A <span class="text-warning">fade</span> és <span
+                                    class="text-warning">show</span> osztályokkal animálhatod az üzenet bezárását.</p>
+                            <p class="fs-5 mb-2 border border-danger border-2 text-warning p-1">Az üzenet alap esetben végleg eltűnik az oldalról, amikor bezárod!<br>De ebben a példában a gomb megnyomásával vissza tudod hozni!</p>
+                            <button class="btn btn-primary p-2 my-3 disabled" id="alertVisszahozas">Üzenet visszahozása</button>
+                            <p class="fs-5 mb-2">Az 'X' gomb kódja:</p>
+                            <pre class="language-html rounded-2 p-3 mw-100" tabindex="0">
+                                <code class="language-html fs-8">
+                                    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                                </code>
+                            </pre>
+                            <div class="d-flex flex-row flex-wrap mb-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input demo-buttons" type="checkbox" name="alertBezaras"
+                                        id="AlertBezaras" value="alert-dismissible" alertegyszerudisable>
+                                    <label class="form-check-label" for="AlertBezaras">'alert-dismissible' és a
+                                        Gomb</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input demo-buttons" type="checkbox" name="alertBezaras"
+                                        id="idAnimalas" value="fade show" alertegyszerudisable>
+                                    <label class="form-check-label" for="idAnimalas">Animációk</label>
+                                </div>
                             </div>
                         </div>
                         <div class="alert alert-primary" role="alert" id="alertTeszt">

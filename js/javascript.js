@@ -24,6 +24,7 @@ function everyResize() {
 $(document).ready(function () {
   var ikonokMutatva = 0;
   var alertAlapContent = "";
+  var alertHTML = $("#alertTeszt").prop("outerHTML");;
   var stringToAdd = "";
   var ikonokKodHelye = {
     "infoIBetu": 0,
@@ -252,7 +253,8 @@ $(document).ready(function () {
       }
       $("[elozoszinalert]").removeAttr("elozoszinalert",);
       $(this).attr("elozoszinalert", $(this).attr("value"));
-    } else if ($(this).attr("name") == "alertIkonok") { // UZENETES RESZ ITT KEZDODIK
+      alertHTML = $("#alertTeszt").prop("outerHTML");;
+    } else if ($(this).attr("name") == "alertIkonok") {
       // PUNCTUATION KIVETELE
       $("#ikonKodokIde").children().each(function () {
         if ($(this).hasClass("punctuation")) {
@@ -283,7 +285,7 @@ $(document).ready(function () {
       } else {
         if ($(this).is(":checked")) {
           $("#alertTeszt").addClass("d-flex align-items-center");
-          alertAlapContent = $("#alertTeszt").html();
+          alertAlapContent = $("#alertTeszt").html();;
           $("#alertTeszt").html("<div id='ikonokIde'></div><div>" + alertAlapContent + "</div>");
           $("#ikonKodokIdePre").removeClass("d-none");
           // LATHATLAN KIVETELE
@@ -294,7 +296,32 @@ $(document).ready(function () {
           ikonokMutatva = ikonokMutatva + 1;
         }
       }
+      alertHTML = $("#alertTeszt").prop("outerHTML");;
+    } else if ($(this).attr("name") == "alertBezaras") {
+      $("#alertTeszt").toggleClass($(this).attr("value"));
+      if ($(this).attr("value") == "alert-dismissible") {
+        if ($(this).is(":checked")) {
+          $("#alertTeszt").append('<button type="button" class="btn-close" data-bs-dismiss="alert" id="alertBezaroGomb"></button>');
+        } else {
+          $("#alertBezaroGomb").remove();
+        }
+      }
+      alertHTML = $("#alertTeszt").prop("outerHTML");
     }
+    $("#alertBezaroGomb").on("click", function () {
+      $("[alertegyszerudisable]").attr("disabled", true);
+      $("#alertVisszahozas").removeClass("disabled");
+    });
+  });
+
+  $("#alertVisszahozas").on("click", function () {
+    $("#uzenetek").append(alertHTML);
+    $("[alertegyszerudisable]").removeAttr("disabled");
+    $("#alertVisszahozas").addClass("disabled");
+    $("#alertBezaroGomb").on("click", function () {
+      $("[alertegyszerudisable]").attr("disabled", true);
+      $("#alertVisszahozas").removeClass("disabled");
+    });
   });
 
   // SZINVALTOZTATO KERET GOMBJAI
