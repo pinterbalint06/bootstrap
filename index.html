@@ -244,13 +244,13 @@
                     <div class="col">
                         <div class="card w-100 h-100 pb-3">
                             <div class="card-body">
-                                <h2 class="card-title">Reszponzívitás</h2>
+                                <a class="card-title fs-2" href="#masodikfocim">Reszponzivitás</a>
                                 <p class="card-text fs-4 text-justify">Különböző méretű, felbontású
                                     kijelzőkre egyszerűen lehet a Bootstrap-el egy weboldalt
                                     csinálni, ami változik a mérettől, felbontástól függően.
                                 </p>
                                 <p class="card-text fs-4 text-justify text-warning">A lenti példánál szimulálni tudod a
-                                    reszponzívitást, a piros cella jobbra-balra húzásával!</p>
+                                    reszponzivitást, a piros cella jobbra-balra húzásával!</p>
                                 <div class="row">
                                     <div class="col-12 h-100" id="meretezhetoparent">
                                         <div id="meretezheto" class="mh-100 row">
@@ -277,7 +277,8 @@
         <div class="row mb-3">
             <div class="col-12">
                 <div class="w-75 mx-auto d-flex justify-content-center flex-column overflow-hidden">
-                    <h1 class="d-block text-center display-1 mx-3 mb-1" id="egyedi">Főbb egyedi megjelenítésű elemek
+                    <h1 class="d-block text-center display-1 mx-3 mb-1 text-break" id="egyedi">Főbb egyedi megjelenítésű
+                        elemek
                     </h1>
                     <h6 class="d-block text-center display-6 mx-3 mb-3">A legtöbb böngészőben az 'F12' megnyomásával meg
                         tudud nézni a beállított elem osztályait!</h6>
@@ -697,7 +698,7 @@
                             <p class="fs-5 mb-2 border border-danger border-2 text-warning p-1">Az üzenet alap esetben
                                 végleg eltűnik az oldalról, amikor bezárod!<br>De ebben a példában a gomb megnyomásával
                                 vissza tudod hozni!</p>
-                            <button class="btn btn-primary p-2 my-3 disabled" id="alertVisszahozas">Üzenet
+                            <button class="btn btn-primary p-2 my-3" id="alertVisszahozas">Üzenet
                                 visszahozása</button>
                             <p class="fs-5 mb-2">Az 'X' gomb kódja:</p>
                             <pre class="language-html rounded-2 p-3 mw-100" tabindex="0">
@@ -868,9 +869,17 @@
             <div class="col-12 gradient">
             </div>
             <div class="col-12">
-                <h1 class="display-1 text-center m-5" id="masodikfocim">Reszponzívitás</h1>
+                <h1 class="display-1 text-center" id="masodikfocim">Reszponzivitás</h1>
             </div>
             <div class="col-12">
+                <h3 class="display-3 text-center">Bootstrap rácsrendszer (Bootstrap Grid)</h3>
+                <p class="fs-5">Egy row osztállyal elátott keretet 12 egységes részre oszt fel.</p>
+                <p class="fs-5">Mindegyik egység <math class="fs-5">
+                        <mfrac>
+                            <mi>1</mi>
+                            <mi>12</mi>
+                        </mfrac>
+                    </math> széles. (≈8.33%)</p>
                 <div class="d-flex flex-wrap justify-content-center w-100">
                     <button id="1" class="btn btn-dark m-2 change-col">Col-1</button>
                     <button id="2" class="btn btn-dark m-2 change-col">Col-2</button>
@@ -881,11 +890,72 @@
                 </div>
             </div>
             <div class="col-12">
-                <div id="cols" class="row mx-3">
-                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-danger">1.</div>
-                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-success">2.</div>
-                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-warning">3.</div>
-                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-primary">4.</div>
+                <div id="cols" class="row mx-1">
+                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-danger">25%</div>
+                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-success">25%</div>
+                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-warning">25%</div>
+                    <div class="col-3 fs-4 d-flex justify-content-center align-items-center bg-primary">25%</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h3 class="display-3 text-center mt-3">Progressive Ehancement</h3>
+                <p class="fs-5 fw-bold">Kijelzőtől (felbontástól) függően másképpen jelenítjük meg a weboldal tartalmát.
+                </p>
+                <div class="d-flex">
+                    <div class="d-flex flex-row justify-content-between border-top border-dark border-5">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 justify-content-center d-flex">
+                        <div class="idovonal">
+                            <div class="kartya bg-dark">
+                                <div class="kartyabelso">
+                                    <h3 class="kartyacim"><stron>XXL</stron> ≥ 1400px</h3>
+                                    <p class="fs-5 mb-0 pb-0">Extra extra nagy kijelző</p>
+                                    <p class="fs-5 mb-0 pb-0">Nagy felbontású monitorok, TV-k</p>
+                                    <img class="img-fluid w-50 d-block mx-auto" src="imgs/xxl.png" alt="XXL kijelző">
+                                </div>
+                            </div>
+                            <div class="kartya bg-dark">
+                                <div class="kartyabelso">
+                                    <h3 class="kartyacim">1400px &gt; <strong>XL</strong> ≥ 1200px</h3>
+                                    <p class="fs-5 mb-0 pb-0">Extra nagy kijelző</p>
+                                    <p class="fs-5 mb-0 pb-0">Átlagos monitorok</p>
+                                    <img class="img-fluid w-50 d-block mx-auto" src="imgs/xl.png" alt="XL kijelző">
+                                </div>
+                            </div>
+                            <div class="kartya bg-dark">
+                                <div class="kartyabelso">
+                                    <h3 class="kartyacim">1200px &gt; <strong>L</strong> ≥ 992px</h3>
+                                    <p class="fs-5 mb-0 pb-0">Nagy kijelző</p>
+                                    <p class="fs-5 mb-0 pb-0">Átlagos monitorok, laptopok</p>
+                                    <img class="img-fluid w-50 d-block mx-auto" src="imgs/l.png" alt="L kijelző">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 justify-content-center d-flex">
+                        <div class="idovonal">
+                            <div class="kartya bg-dark">
+                                <div class="kartyabelso">
+                                    <h3 class="kartyacim">Szöveg</h3>
+                                    <p>Próba szöveg</p>
+                                </div>
+                            </div>
+                            <div class="kartya bg-dark">
+                                <div class="kartyabelso">
+                                    <h3 class="kartyacim">Szöveg</h3>
+                                    <p>Próba szöveg</p>
+                                </div>
+                            </div>
+                            <div class="kartya bg-dark">
+                                <div class="kartyabelso">
+                                    <h3 class="kartyacim">Szöveg</h3>
+                                    <p>Próba szöveg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

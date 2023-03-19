@@ -3,7 +3,7 @@
 }
 
 #masodikfocim {
-    font-size: clamp(50px, 5vw, 99999px);
+    font-size: clamp(50px, 8vw, 99999px);
 }
 
 .focimcol {
@@ -28,11 +28,11 @@ body {
 
 .gradient {
     height: 10vh;
-    background: rgb(85,60,123);
-    background: -moz-linear-gradient(180deg, rgba(85,60,123,1) 32%, rgba(0,55,96,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(85,60,123,1) 32%, rgba(0,55,96,1) 100%);
-    background: linear-gradient(180deg, rgba(85,60,123,1) 32%, rgba(0,55,96,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#553c7b",endColorstr="#003760",GradientType=1);
+    background: rgb(85, 60, 123);
+    background: -moz-linear-gradient(180deg, rgba(85, 60, 123, 1) 32%, rgba(0, 55, 96, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(85, 60, 123, 1) 32%, rgba(0, 55, 96, 1) 100%);
+    background: linear-gradient(180deg, rgba(85, 60, 123, 1) 32%, rgba(0, 55, 96, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#553c7b", endColorstr="#003760", GradientType=1);
 }
 
 #szinvalto {
@@ -282,4 +282,41 @@ mark {
         filter: blur(0);
         opacity: 1;
     }
+}
+
+/* IDOVONAL */
+
+.idovonal {
+    background: rgba(0, 55, 96);
+    border-left: 2px solid #333;
+}
+
+.kartya {
+    position: relative;
+    margin: 0 0 20px 20px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.kartyabelso {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kartyacim {
+    color: #A28BE7;
+    position: relative;
+}
+
+.kartyacim::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -39px;
+    border: 3px solid #A28BE7;
 }

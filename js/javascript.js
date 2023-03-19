@@ -307,22 +307,21 @@ $(document).ready(function () {
           $("#alertBezaroGomb").remove();
         }
       }
+      $("#alertBezaroGomb").on("click", function () {
+        $("[alertegyszerudisable]").attr("disabled", true);
+      });
       alertHTML = $("#alertTeszt").prop("outerHTML");
     }
     $("#alertBezaroGomb").on("click", function () {
       $("[alertegyszerudisable]").attr("disabled", true);
-      $("#alertVisszahozas").removeClass("disabled");
     });
   });
 
   $("#alertVisszahozas").on("click", function () {
-    $("#uzenetek").append(alertHTML);
-    $("[alertegyszerudisable]").removeAttr("disabled");
-    $("#alertVisszahozas").addClass("disabled");
-    $("#alertBezaroGomb").on("click", function () {
-      $("[alertegyszerudisable]").attr("disabled", true);
-      $("#alertVisszahozas").removeClass("disabled");
-    });
+    if (!$('#alertTeszt').length) {
+      $("#uzenetek").append(alertHTML);
+      $("[alertegyszerudisable]").removeAttr("disabled");
+    }
   });
 
   // SZINVALTOZTATO KERET GOMBJAI
@@ -347,8 +346,15 @@ $(document).ready(function () {
     var colok = parseInt($(this).attr("id"));
     $("#cols").children().slideUp(500, function () {
       $("#cols").empty();
-      for (var i = 0; i < 12/colok; i++) {
-        $("<div class='col-" + colok +" fs-4 d-flex justify-content-center align-items-center bg-" + szinek[i%6] + "'>" + (i+1) + ".</div>").appendTo($("#cols")).hide().slideDown(500);
+      for (var i = 0; i < (12 / colok); i++) {
+        var eredmeny = (100 / (12 / colok));
+        console.log(Number.isInteger(eredmeny));
+        if (Number.isInteger(eredmeny)) {
+          eredmeny = parseInt(eredmeny);
+        } else {
+          eredmeny = eredmeny.toFixed(2);
+        }
+        $("<div class='col-" + colok + " fs-4 d-flex justify-content-center align-items-center bg-" + szinek[i % 6] + "'>" + eredmeny + "%</div>").appendTo($("#cols")).hide().slideDown(500);
       }
     });
   });
