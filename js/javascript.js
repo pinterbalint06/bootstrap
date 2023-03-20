@@ -1,6 +1,12 @@
 /*jshint esversion: 8 */
 
 function everyResize() {
+	$("#kijelzoSzelessegIde").text($(window).width().toString());
+	if (window.matchMedia("(min-width: " + $("#kijelzoSzelessegInput").val() + "px)").matches) {
+		$(".kek").css("background-color", "navy");
+	} else {
+		$(".kek").css("background-color", "");
+	}
 	$("#onlinetelepites").css("height", $("#offlinetelepites").height().toString() + "px");
 	$(".logo").css("height", $("#telepitescim").css('font-size'));
 	$("#progressbarwidth").css("width", $("#wrapperforwidth").width().toString() + "px");
@@ -67,14 +73,12 @@ $(document).ready(function () {
 		everyResize();
 	};
 	Prism.highlightAll();
-	$("#ikonKodokIde").children().each(function () {
-		if ($(this).hasClass("punctuation")) {
-			$(this).remove();
-		}
-	});
-	$("#ikonKodokIde").children().each(function () {
-		$(this).addClass("d-none");
-	});
+
+	if (window.matchMedia("(min-width: 900px)").matches) {
+		$(".kek").css("background-color", "navy");
+	} else {
+		$(".kek").css("background-color", "");
+	}
 	$('#changea').find('a').attr("target", "_blank");
 	$(".contentchange").click(function () {
 		$(".contentchange").attr("disabled", true);
@@ -112,6 +116,38 @@ $(document).ready(function () {
 			$('#meretezheto2').css("height", "auto");
 		}
 	});
+
+	// MINIMUM SZELESSEG
+
+	$("#kijelzoSzelesseg").on("click", function () {
+		if ($("#kijelzoSzelessegInput").val() != "") {
+			if (parseInt($("#kijelzoSzelessegInput").val()) > 0 && parseInt($("#kijelzoSzelessegInput").val()) <= 8640) {
+				$(".minimumSzelessegSzoveg").text($("#kijelzoSzelessegInput").val().toString());
+				if (window.matchMedia("(min-width: " + $("#kijelzoSzelessegInput").val() + "px)").matches) {
+					$(".kek").css("background-color", "navy");
+				} else {
+					$(".kek").css("background-color", "");
+				}
+			} else {
+				if (parseInt($("#kijelzoSzelessegInput").val()) <= 0) {
+					$("#kijelzoSzelessegInput").val("1");
+					if (!$("#minimumAlert").length) {
+						$("#minimumHiba").append('<div class="alert alert-danger alert-dismissible fade show" role="alert" id="minimumAlert"><strong>Rossz érték!</strong><br><span id="minimumHibaUzenet">A minimum érték 1px!</span> <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
+					} else {
+						$("#minimumHibaUzenet").text("A minimum érték 1px!");
+					}
+				} else {
+					$("#kijelzoSzelessegInput").val("8640");
+					if (!$("#minimumAlert").length) {
+						$("#minimumHiba").append('<div class="alert alert-danger alert-dismissible fade show" role="alert" id="minimumAlert"><strong>Rossz érték!</strong><br><span id="minimumHibaUzenet">A maximum érték 8640px!</span> <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
+					} else {
+						$("#minimumHibaUzenet").text("A maximum érték 8640px!");
+					}
+				}
+			}
+		}
+	});
+
 	// EGYEDI MEGJELENITESU DOLGOK GOMBJAI
 	$(".demo-buttons").change(function () {
 		if ($(this).attr("name") == "tableSzinek") { // TABLAS RESZ ITT KEZDODIK
@@ -282,31 +318,38 @@ $(document).ready(function () {
 			$(this).attr("data-elozoszinalert", $(this).attr("value"));
 			alertHTML = $("#alertTeszt").prop("outerHTML");
 		} else if ($(this).attr("name") == "alertIkonok") {
-			// PUNCTUATION KIVETELE
-			$("#ikonKodokIde").children().each(function () {
-				if ($(this).hasClass("punctuation")) {
-					$(this).remove();
-				}
-			});
 			// FO RESZ
 			if (ikonokMutatva > 0) {
 				if ($(this).is(":checked")) {
 					// LATHATLAN KIVETELE
-					for (var i = 0; i < 3; i++) {
-						$("#ikonKodokIde").children().eq(((ikonokKodHelye[$(this).attr("value")]) * 3) + i).removeClass("d-none");
+					if ($(this).attr("value") == "infoIBetu") {
+						$("#ikonKodokIdePre").removeClass("d-none");
+						$("#ikonKodokIde").removeClass("d-none");
+					} else if ($(this).attr("value") == "pipa") {
+						$("#ikonKodokIdePre2").removeClass("d-none");
+						$("#ikonKodokIde2").removeClass("d-none");
+					} else if ($(this).attr("value") == "felkialtoJel") {
+						$("#ikonKodokIdePre3").removeClass("d-none");
+						$("#ikonKodokIde3").removeClass("d-none");
 					}
 					$("#ikonokIde").append('<svg class="bi flex-shrink-0 me-2 text-' + $("[data-elozoszinalert]").attr("data-elozoszinalert") + '" role="img" id="' + $(this).attr("value") + 'IkonId"><use xlink:href="#' + $(this).attr("value") + '"/></svg>');
 					ikonokMutatva = ikonokMutatva + 1;
 				} else {
-					for (var k = 0; k < 3; k++) {
-						$("#ikonKodokIde").children().eq(((ikonokKodHelye[$(this).attr("value")]) * 3) + k).addClass("d-none");
+					if ($(this).attr("value") == "infoIBetu") {
+						$("#ikonKodokIdePre").addClass("d-none");
+						$("#ikonKodokIde").addClass("d-none");
+					} else if ($(this).attr("value") == "pipa") {
+						$("#ikonKodokIdePre2").addClass("d-none");
+						$("#ikonKodokIde2").addClass("d-none");
+					} else if ($(this).attr("value") == "felkialtoJel") {
+						$("#ikonKodokIdePre3").addClass("d-none");
+						$("#ikonKodokIde3").addClass("d-none");
 					}
 					$("#" + $(this).attr("value") + "IkonId").remove();
 					ikonokMutatva = ikonokMutatva - 1;
 					if (ikonokMutatva == 0) {
 						$("#alertTeszt").removeClass("d-flex align-items-center");
 						$("#alertTeszt").html(alertAlapContent);
-						$("#ikonKodokIdePre").addClass("d-none");
 					}
 				}
 			} else {
@@ -314,10 +357,16 @@ $(document).ready(function () {
 					$("#alertTeszt").addClass("d-flex align-items-center");
 					alertAlapContent = $("#alertTeszt").html();
 					$("#alertTeszt").html("<div id='ikonokIde'></div><div>" + alertAlapContent + "</div>");
-					$("#ikonKodokIdePre").removeClass("d-none");
 					// LATHATLAN KIVETELE
-					for (var i2 = 0; i2 < 3; i2++) {
-						$("#ikonKodokIde").children().eq(((ikonokKodHelye[$(this).attr("value")]) * 3) + i2).removeClass("d-none");
+					if ($(this).attr("value") == "infoIBetu") {
+						$("#ikonKodokIdePre").removeClass("d-none");
+						$("#ikonKodokIde").removeClass("d-none");
+					} else if ($(this).attr("value") == "pipa") {
+						$("#ikonKodokIdePre2").removeClass("d-none");
+						$("#ikonKodokIde2").removeClass("d-none");
+					} else if ($(this).attr("value") == "felkialtoJel") {
+						$("#ikonKodokIdePre3").removeClass("d-none");
+						$("#ikonKodokIde3").removeClass("d-none");
 					}
 					$("#ikonokIde").append('<svg class="bi flex-shrink-0 me-2 text-' + $("[data-elozoszinalert]").attr("data-elozoszinalert") + '" role="img" id="' + $(this).attr("value") + 'IkonId"><use xlink:href="#' + $(this).attr("value") + '"/></svg>');
 					ikonokMutatva = ikonokMutatva + 1;

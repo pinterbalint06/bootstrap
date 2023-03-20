@@ -39,7 +39,8 @@
                         <div class="progress-bar progress-bar-striped" id="progressbaranimation"></div>
                     </div>
                 </div>
-                <p class="fs-3 visible-below-sm">A sötét keret alatti fehér gombokkal tudsz léptetni az online és offline telepítés között, vagy érintőképernyőn a sötét keret jobbra-balra húzással is tudsz!</p>
+                <p class="fs-3 visible-below-sm">A sötét keret alatti fehér gombokkal tudsz léptetni az online és
+                    offline telepítés között, vagy érintőképernyőn a sötét keret jobbra-balra húzással is tudsz!</p>
                 <div id="telepites" class="carousel slide" data-bs-touch="true">
                     <div class="row">
                         <div class="col-0 col-sm-2">
@@ -115,9 +116,10 @@
                     </div>
                     <div class="carousel-indicators position-relative d-flex justify-content-center mt-2">
                         <div class="bg-dark rounded-3 p-3 w-auto">
-                            <button type="button" data-bs-target="#telepites" data-bs-slide-to="0" class="active bg-light"
-                                aria-current="true"></button>
-                            <button type="button" data-bs-target="#telepites" data-bs-slide-to="1" class="bg-light"></button>
+                            <button type="button" data-bs-target="#telepites" data-bs-slide-to="0"
+                                class="active bg-light" aria-current="true"></button>
+                            <button type="button" data-bs-target="#telepites" data-bs-slide-to="1"
+                                class="bg-light"></button>
                         </div>
                     </div>
                 </div>
@@ -127,7 +129,7 @@
             <div class="col-12">
                 <h1 class="w-100 d-block text-center display-2 mb-3">Miért jó a Bootstrap?</h1>
                 <div class="row row-cols-1 row-cols-lg-3">
-                    <div class="col">
+                    <div class="col mt-2">
                         <div class="card w-100 h-100 pb-3">
                             <div class="card-body d-flex flex-column">
                                 <a class="card-title fs-2" href="#egyedi">Egyedi megjelenítés</a>
@@ -190,7 +192,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mt-2">
                         <div class="card w-100 h-100 pb-3">
                             <div class="card-body">
                                 <h2 class="card-title">Modern kialakítás</h2>
@@ -243,7 +245,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mt-2">
                         <div class="card w-100 h-100 pb-3">
                             <div class="card-body">
                                 <a class="card-title fs-2" href="#masodikfocim">Reszponzivitás</a>
@@ -256,16 +258,16 @@
 
                                 <p class="fs-4 fw-bold">A szürke rész a minimum, annál kisebb nem tud lenni.</p>
                                 <div class="d-flex justify-content-evenly">
-                                    <div class="d-flex flex-column justify-content-center align-items-center">
-                                        <p>Első kettő cella:</p>
+                                    <div class="d-flex flex-column justify-content-between align-items-between me-1">
+                                        <p class="fs-5 text-center">Első kettő cella:</p>
                                         <p class="bg-dark-subtle p-2 m-0 rounded-2 d-inline-block text-center"><span
                                                 class="text-success">col-12</span> <span
                                                 class="text-warning">col-md-6</span> <span
                                                 class="text-danger">col-lg-4</span>
                                         </p>
                                     </div>
-                                    <div class="d-flex flex-column justify-content-center align-items-center">
-                                        <p>Utolsó cella:</p>
+                                    <div class="d-flex flex-column justify-content-between align-items-between ms-1">
+                                        <p class="fs-5 text-center">Utolsó cella:</p>
                                         <p class="bg-dark-subtle p-2 m-0 rounded-2 d-inline-block text-center"><span
                                                 class="text-success">col-12</span> <span
                                                 class="text-warning">col-md-12</span> <span
@@ -299,7 +301,7 @@
         </div>
         <div class="row mb-3">
             <div class="col-12">
-                <div class="w-75 mx-auto d-flex justify-content-center flex-column overflow-hidden">
+                <div class="responsive-width mx-auto d-flex justify-content-center flex-column overflow-hidden">
                     <h1 class="d-block text-center display-1 mx-3 mb-1 text-break" id="egyedi">Főbb egyedi megjelenítésű
                         elemek
                     </h1>
@@ -677,12 +679,23 @@
                                 <div class="mw-100">
                                     <pre class="language-html mw-100 d-none" tabindex="0" id="ikonKodokIdePre">
                                         <code class="language-html fs-8" id="ikonKodokIde">
+                                            &lt;!-- I BETŰ IKON --&gt;
                                             &lt;svg class="bi flex-shrink-0 me-2 text-primary" role="img" id="infoIBetuIkonId"&gt;
                                                 &lt;use xlink:href="#infoIBetu"/&gt;
                                             &lt;/svg&gt;
+                                        </code>
+                                    </pre>
+                                    <pre class="language-html mw-100 d-none" tabindex="0" id="ikonKodokIdePre2">
+                                        <code class="language-html fs-8" id="ikonKodokIde2">
+                                            &lt;!-- PIPA IKON --&gt;
                                             &lt;svg class="bi flex-shrink-0 me-2 text-primary" role="img" id="pipaIkonId"&gt;
                                                 &lt;use xlink:href="#pipa"/&gt;
                                             &lt;/svg&gt;
+                                        </code>
+                                    </pre>
+                                    <pre class="language-html mw-100 d-none" tabindex="0" id="ikonKodokIdePre3">
+                                        <code class="language-html fs-8" id="ikonKodokIde3">
+                                            &lt;!-- FELKIÁLTÓ JEL IKON --&gt;
                                             &lt;svg class="bi flex-shrink-0 me-2 text-primary" role="img" id="felkialtoJelIkonId"&gt;
                                                 &lt;use xlink:href="#felkialtoJel"/&gt;
                                             &lt;/svg&gt;
@@ -891,9 +904,7 @@
             </div>
         </div>
         <div class="row ujhatterszin pb-5">
-            <div class="col-12 gradient">
-            </div>
-            <div class="col-12">
+            <div class="col-12 gradientfocim2 d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-center" id="masodikfocim">Reszponzivitás</h1>
             </div>
             <div class="col-12">
@@ -1009,7 +1020,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="row w-100">
+                <div class="row me-1">
                     <div class="col-12 w-100 d-flex p-0">
                         <hr class="minimumMinimum2 bg-secondary">
                         <hr class="minimum2 bg-primary">
@@ -1035,6 +1046,44 @@
                         </div>
                     </div>
                 </div>
+                <div class="d-flex w-100 mw-100 justify-content-center p-0">
+                    <div class="bg-dark p-2 mx-3 rounded-5 mt-5 mw-100">
+                        <h3 class="display-3 text-center mt-3">Média Lekérdezés</h3>
+                        <div class="d-flex justify-content-center">
+                            <div class="kek p-3 d-inline-block" id="minimumHiba">
+                                <p class="fs-5">Jelenlegi kijelző (ablak) szélessége: <strong><span
+                                            id="kijelzoSzelessegIde"></span>px</strong></p>
+                                <p class="fs-5 fw-bold">Gépen tudod változtatni az ablak méretét!</p>
+                                <p class="fs-5">A lenti inputban változtatni tudod a minimum szélességet.
+                                    <strong>(px-et
+                                        nem kell írni. minimum szám: 1, maximum szám: 8640)</strong>
+                                </p>
+                                <div class="d-flex w-100 mw-100 flex-wrap">
+                                    <button class="btn btn-primary" type="button" id="kijelzoSzelesseg">Minimum
+                                        szélesség állítása</button>
+                                    <input type="number" class="form-control" placeholder="Minimum szélesség"
+                                        aria-describedby="kijelzoSzelesseg" id="kijelzoSzelessegInput" min="1"
+                                        max="8640"
+                                        onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'">
+                                </div>
+                                <p class="fs-5">Ha a kijelző (ablak) minimum <span
+                                        class="minimumSzelessegSzoveg">900</span>px széles ez a keret kék (navy)
+                                    színű lesz.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mw-100">
+                            <pre class="language-css rounded-2 p-3 mw-100" tabindex="0">
+                                <code class="language-css">
+                                    @media screen and (min-width: <span class="minimumSzelessegSzoveg">900</span>px) {
+                                        .piros {
+                                            background-color: navy;
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1047,11 +1096,3 @@
 </body>
 
 </html>
-
-<!-- TODO:
-            1. MEDIA LEKERDEZES
-            2. RESZPONZIVITAS SZIMULATOR 1 MARGIN ADASA AZ OSZTALYOK LEIRASAHOZ
-            3. PADDING ADASA A BODYNAK HOGY RESZPONZIVITAS SZIMULATOR 2 MIATT NE MOZOGJON AZ OLDAL (LEHET HOGY MAJD A MEDIA LEKERDEZESES RESZ MEGCSINALASAVAL MEGOLDODIK)
-            4. NEM MUSZAJ DE HA MEGTUDOM AZ IKONOK KODJA RENDES MUTATASSA (TALAN KULON ELEMENKET ES UGY D-NONE LE ES FELVETELEVEL ES NEM EGY PRE ES CODEBA RAKVA)
-            5. RESZPONZIVITASHOZ TALAN GRADIENT HA JOL NEZ KI ES VAN IDO
-            6. FOBB EGYEDI ELEMEKROL KIS KIJELZON LEVENNI A MARGINT-->
