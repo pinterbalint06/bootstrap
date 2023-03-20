@@ -39,16 +39,17 @@
                         <div class="progress-bar progress-bar-striped" id="progressbaranimation"></div>
                     </div>
                 </div>
-                <div id="telepites" class="carousel slide">
+                <p class="fs-3 visible-below-sm">A sötét keret alatti fehér gombokkal tudsz léptetni az online és offline telepítés között, vagy érintőképernyőn a sötét keret jobbra-balra húzással is tudsz!</p>
+                <div id="telepites" class="carousel slide" data-bs-touch="true">
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-0 col-sm-2">
                             <button class="carousel-control-prev position-relative w-100 h-100" type="button"
                                 data-bs-target="#telepites" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
                         </div>
-                        <div class="col-8">
+                        <div class="col-12 col-sm-8">
                             <div class="carousel-inner bg-dark rounded-3 p-3 minheight20vw" id="changea">
                                 <div class="carousel-item active" id="onlinetelepites">
                                     <div class="d-flex flex-column h-100">
@@ -104,7 +105,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-0 col-sm-2">
                             <button class="carousel-control-next position-relative w-100 h-100" type="button"
                                 data-bs-target="#telepites" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -112,11 +113,12 @@
                             </button>
                         </div>
                     </div>
-                    <div class="carousel-indicators position-relative">
-                        <button type="button" data-bs-target="#telepites" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#telepites" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
+                    <div class="carousel-indicators position-relative d-flex justify-content-center mt-2">
+                        <div class="bg-dark rounded-3 p-3 w-auto">
+                            <button type="button" data-bs-target="#telepites" data-bs-slide-to="0" class="active bg-light"
+                                aria-current="true"></button>
+                            <button type="button" data-bs-target="#telepites" data-bs-slide-to="1" class="bg-light"></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -818,12 +820,14 @@
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input demo-buttons" type="radio"
-                                                    name="gombokMeret" id="btnlg" value="btn-lg" data-kepekegyszerudisable>
+                                                    name="gombokMeret" id="btnlg" value="btn-lg"
+                                                    data-kepekegyszerudisable>
                                                 <label class="form-check-label" for="btnlg">btn-lg</label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input demo-buttons" type="radio"
-                                                    name="gombokMeret" id="btnsm" value="btn-sm" data-kepekegyszerudisable>
+                                                    name="gombokMeret" id="btnsm" value="btn-sm"
+                                                    data-kepekegyszerudisable>
                                                 <label class="form-check-label" for="btnsm">btn-sm</label>
                                             </div>
                                         </div>
@@ -1046,8 +1050,8 @@
 
 <!-- TODO:
             1. MEDIA LEKERDEZES
-            2. TELEPITESES RESZ RESPONZIVITAS JAVITASA, NYILAK ELTUNTETESE KIS KIJELZON
-            3. RESZPONZIVITAS SZIMULATOR 1 MARGIN ADASA AZ OSZTALYOK LEIRASAHOZ
-            4. PADDING ADASA A BODYNAK HOGY RESZPONZIVITAS SZIMULATOR 2 MIATT NE MOZOGJON AZ OLDAL (LEHET HOGY MAJD A MEDIA LEKERDEZESES RESZ MEGCSINALASAVAL MEGOLDODIK)
-            5. NEM MUSZAJ DE HA MEGTUDOM AZ IKONOK KODJA RENDES MUTATASSA (TALAN KULON ELEMENKET ES UGY D-NONE LE ES FELVETELEVEL ES NEM EGY PRE ES CODEBA RAKVA)
-            6. RESZPONZIVITASHOZ TALAN GRADIENT HA JOL NEZ KI ES VAN IDO-->
+            2. RESZPONZIVITAS SZIMULATOR 1 MARGIN ADASA AZ OSZTALYOK LEIRASAHOZ
+            3. PADDING ADASA A BODYNAK HOGY RESZPONZIVITAS SZIMULATOR 2 MIATT NE MOZOGJON AZ OLDAL (LEHET HOGY MAJD A MEDIA LEKERDEZESES RESZ MEGCSINALASAVAL MEGOLDODIK)
+            4. NEM MUSZAJ DE HA MEGTUDOM AZ IKONOK KODJA RENDES MUTATASSA (TALAN KULON ELEMENKET ES UGY D-NONE LE ES FELVETELEVEL ES NEM EGY PRE ES CODEBA RAKVA)
+            5. RESZPONZIVITASHOZ TALAN GRADIENT HA JOL NEZ KI ES VAN IDO
+            6. FOBB EGYEDI ELEMEKROL KIS KIJELZON LEVENNI A MARGINT-->
